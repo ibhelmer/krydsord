@@ -1,0 +1,2 @@
+# Tested dependency. Tkinter and sqlite3 are Python/operating-system components.
+reportlab==4.4.9
