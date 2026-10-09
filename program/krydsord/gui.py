@@ -140,6 +140,7 @@ class Application(tk.Tk):
         self.generation_category = tk.StringVar(value=ALL_CATEGORIES)
         self.selected_only = tk.BooleanVar(value=False)
         self.show_answers = tk.BooleanVar(value=True)
+        self.cell_mode = tk.StringVar(value="Vælg position")
         self.status_var = tk.StringVar(value="Klar. Ordbogen gemmes automatisk; gem krydsordet med Ctrl+S.")
         self.stats_var = tk.StringVar()
         self.search_var = tk.StringVar()
@@ -245,6 +246,10 @@ class Application(tk.Tk):
         preview_tools = ttk.Frame(left)
         preview_tools.pack(fill="x", pady=(0, 8))
         ttk.Label(preview_tools, text="Gitter", style="Heading.TLabel").pack(side="left")
+        ttk.Label(preview_tools, text="Klik-funktion:").pack(side="left", padx=(14, 4))
+        ttk.Combobox(preview_tools, textvariable=self.cell_mode, state="readonly", width=19,
+                     values=("Vælg position", "Skillefelt til/fra", "Kodebogstav til/fra")).pack(side="left")
+        ttk.Button(preview_tools, text="Ryd kodeord", command=self.clear_codeword).pack(side="left", padx=5)
         ttk.Checkbutton(preview_tools, text="Vis svar i gitteret", variable=self.show_answers,
                         command=self.draw_grid).pack(side="right")
         board = ttk.Frame(left)
@@ -403,6 +408,7 @@ class Application(tk.Tk):
         self.cols_var.set(str(puzzle.cols))
         self.pending_entry = None
         self.highlight_index = None
+        self.cell_mode.set("Vælg position")
         self.selected_word_var.set("Intet ord valgt")
         self.selected_clue_var.set("Vælg en ordforklaring fra orddatabasen.")
         self.loading = False
@@ -419,7 +425,9 @@ class Application(tk.Tk):
             self.placed_tree.insert("", "end", iid=str(i), values=(p.number, direction, p.entry.answer, p.entry.clue))
         board = Board(self.puzzle)
         self.stats_var.set(f"{len(self.puzzle.placements)} ord · {board.quality()[1]} krydsninger · "
-                           f"{self.puzzle.rows} × {self.puzzle.cols} felter")
+                           f"{self.puzzle.rows} × {self.puzzle.cols} felter · "
+                           f"{len(self.puzzle.blocked)} skillefelter · "
+                           f"kodeord: {len(self.puzzle.secret_cells)} bogstaver")
         self.draw_grid()
 
     def draw_grid(self):
@@ -444,8 +452,17 @@ class Application(tk.Tk):
         for r in range(puzzle.rows):
             for c in range(puzzle.cols):
                 x, y = 29 + c * cell, 29 + r * cell
-                fill = "#D9EDF0" if (r, c) in highlighted else "white" if grid[r][c] else "#E6EBEF"
+                fill = ("#ADB7C0" if (r, c) in puzzle.blocked else
+                        "#FFF0B8" if (r, c) in puzzle.secret_cells else
+                        "#D9EDF0" if (r, c) in highlighted else
+                        "white" if grid[r][c] else "#E6EBEF")
                 canvas.create_rectangle(x, y, x + cell, y + cell, fill=fill, outline="#AAB8C1", width=0.7)
+                if (r, c) in puzzle.secret_cells:
+                    number = puzzle.secret_cells.index((r, c)) + 1
+                    canvas.create_rectangle(x + 1, y + 1, x + cell - 1, y + cell - 1,
+                                            outline="#C78116", width=2)
+                    canvas.create_text(x + cell - 2, y + cell - 2, text=str(number), anchor="se",
+                                       font=("Segoe UI", -max(7, int(cell * .25)), "bold"), fill="#A76200")
                 if (r, c) in starts:
                     canvas.create_text(x + 2, y + 1, text=str(starts[r, c]), anchor="nw",
                                        font=("Segoe UI", -max(7, int(cell * 0.27))), fill="#2E424D")
@@ -477,8 +494,41 @@ class Application(tk.Tk):
         row = int((self.canvas.canvasy(event.y) - self.grid_offset) // self.cell_size)
         col = int((self.canvas.canvasx(event.x) - self.grid_offset) // self.cell_size)
         if 0 <= row < self.puzzle.rows and 0 <= col < self.puzzle.cols:
+            if self.cell_mode.get() != "Vælg position":
+                if self.busy:
+                    self.status_var.set("Vent til genereringen er afsluttet.")
+                    return
+                pos = (row, col)
+                if self.cell_mode.get() == "Skillefelt til/fra":
+                    if pos in self.puzzle.blocked:
+                        self.puzzle.blocked.remove(pos)
+                    elif self.puzzle.grid()[row][col]:
+                        self.status_var.set("Skillefelter kan kun sættes på tomme felter.")
+                        return
+                    else:
+                        self.puzzle.blocked.append(pos)
+                else:
+                    if pos in self.puzzle.secret_cells:
+                        self.puzzle.secret_cells.remove(pos)
+                    elif not self.puzzle.grid()[row][col]:
+                        self.status_var.set("Vælg et bogstavfelt til kodeordet.")
+                        return
+                    else:
+                        self.puzzle.secret_cells.append(pos)
+                self._mark_dirty()
+                self._display_puzzle()
+                self.status_var.set("Kodeord: " + self.puzzle.codeword() if self.puzzle.secret_cells else "Felt opdateret.")
+                return
             self.manual_row.set(str(row + 1))
             self.manual_col.set(str(col + 1))
+
+    @action
+    def clear_codeword(self):
+        self._ensure_idle()
+        self.puzzle.secret_cells.clear()
+        self._mark_dirty()
+        self._display_puzzle()
+        self.status_var.set("Kodeordet er ryddet.")
 
     def placed_selected(self, event=None):
         selection = self.placed_tree.selection()
