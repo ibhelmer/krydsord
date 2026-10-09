@@ -1,0 +1,211 @@
+﻿word;clue;category
+CYBERSIKKERHED;Beskytter digitale systemer;Grundlæggende cybersikkerhed
+INFORMATIONSSIKKERHED;Beskytter information uanset medie;Grundlæggende cybersikkerhed
+ITSIKKERHED;Sikkerhed for computerteknologi;Grundlæggende cybersikkerhed
+CIATRIADEN;Tre grundprincipper for informationssikkerhed;Grundlæggende cybersikkerhed
+CONFIDENTIALITY;Fortrolighed på engelsk;Grundlæggende cybersikkerhed
+INTEGRITY;Datakorrekthed og beskyttelse mod ændringer;Grundlæggende cybersikkerhed
+AVAILABILITY;Systemers adgang ved behov;Grundlæggende cybersikkerhed
+AUTHENTICATION;Kontrol af hvem en bruger er;Grundlæggende cybersikkerhed
+AUTHORIZATION;Bestemmer hvad brugeren må;Grundlæggende cybersikkerhed
+ACCOUNTABILITY;Ansvarlighed og sporbarhed;Grundlæggende cybersikkerhed
+NONREPUDIATION;Uafviselighed ved digital kommunikation;Grundlæggende cybersikkerhed
+THREAT;Engelsk ord for trussel;Grundlæggende cybersikkerhed
+VULNERABILITY;Engelsk ord for sårbarhed;Grundlæggende cybersikkerhed
+EXPLOIT;Udnytter en sikkerhedsfejl;Grundlæggende cybersikkerhed
+RISK;Sandsynlighed sammenholdt med konsekvens;Grundlæggende cybersikkerhed
+ATTACKSURFACE;Et systems samlede angrebsflade;Grundlæggende cybersikkerhed
+ATTACKVECTOR;Angriberens vej ind;Grundlæggende cybersikkerhed
+SECURITYPOLICY;Organisationens regler for sikkerhed;Grundlæggende cybersikkerhed
+SECURITYCONTROL;Beskyttelsesmekanisme;Grundlæggende cybersikkerhed
+DEFENSEINDEPTH;Lagdelt beskyttelse;Grundlæggende cybersikkerhed
+ZEROTRUST;Stol aldrig implicit på netværksplacering;Grundlæggende cybersikkerhed
+LEASTPRIVILEGE;Kun de nødvendige privilegier;Grundlæggende cybersikkerhed
+SECURITYBYDESIGN;Sikkerhed indbygges fra begyndelsen;Grundlæggende cybersikkerhed
+HARDENING;Sikring gennem konfiguration;Grundlæggende cybersikkerhed
+PATCHMANAGEMENT;Styring af sikkerhedsrettelser;Grundlæggende cybersikkerhed
+ASSET;Værdifuld ressource i organisationen;Grundlæggende cybersikkerhed
+SECURITYAWARENESS;Medarbejderes sikkerhedsbevidsthed;Grundlæggende cybersikkerhed
+FIREWALL;Filtrerer netværkstrafik;Netværkssikkerhed
+PACKETFILTERING;Netværksfiltrering på pakkeniveau;Netværkssikkerhed
+STATEFULFIREWALL;Firewall med forbindelsestilstand;Netværkssikkerhed
+NEXTGENERATIONFIREWALL;Avanceret applikationsbevidst firewall;Netværkssikkerhed
+IDS;Registrerer indtrængen;Netværkssikkerhed
+IPS;Forebygger indtrængen automatisk;Netværkssikkerhed
+NIDS;IDS som overvåger netværket;Netværkssikkerhed
+HIDS;IDS på en enkelt computer;Netværkssikkerhed
+VPN;Virtuelt privat netværk;Netværkssikkerhed
+IPSEC;Beskytter trafik på IP-laget;Netværkssikkerhed
+TLS;Sikrer transportkommunikation;Netværkssikkerhed
+HTTPS;Sikker webkommunikation;Netværkssikkerhed
+DMZ;Netværkszone mellem tillidsniveauer;Netværkssikkerhed
+VLAN;Virtuelt lokalt netværk;Netværkssikkerhed
+NETWORKSEGMENTATION;Opdeler et netværk i zoner;Netværkssikkerhed
+MICROSEGMENTATION;Finkornet netværksopdeling;Netværkssikkerhed
+NAC;Styrer adgang til et netværk;Netværkssikkerhed
+RADIUS;AAA-protokol til netværksadgang;Netværkssikkerhed
+TACACS;AAA-protokol til administration af udstyr;Netværkssikkerhed
+ARPSPOOFING;Forfalsker adresseopslag på LAN;Netværkssikkerhed
+DNSSPOOFING;Forfalsker navneopslag;Netværkssikkerhed
+DHCPSTARVATION;Opbruger pool af IP-adresser;Netværkssikkerhed
+MACFLOODING;Fylder switchens MAC-tabel;Netværkssikkerhed
+PORTSCANNING;Finder åbne netværksporte;Netværkssikkerhed
+PACKETSNIFFING;Opsamler netværkspakker;Netværkssikkerhed
+DEEPPACKETINSPECTION;Dyb analyse af netværkspakker;Netværkssikkerhed
+DDOS;Distribueret tjenestenægtelse;Netværkssikkerhed
+MANINTHEMIDDLE;Angriber mellem to kommunikerende parter;Netværkssikkerhed
+REPLAYATTACK;Genafspiller opsnappet kommunikation;Netværkssikkerhed
+HONEYPOT;Digitalt lokkemiddel til angribere;Netværkssikkerhed
+ENCRYPTION;Gør klartekst ulæselig;Kryptografi
+DECRYPTION;Gør krypteret data læsbar;Kryptografi
+PLAINTEXT;Ukrypteret tekst;Kryptografi
+CIPHERTEXT;Krypteret tekst;Kryptografi
+SYMMETRICENCRYPTION;Kryptering med fælles hemmelig nøgle;Kryptografi
+ASYMMETRICENCRYPTION;Kryptering med nøglepar;Kryptografi
+AES;Udbredt symmetrisk krypteringsalgoritme;Kryptografi
+RSA;Kryptosystem opkaldt efter tre opfindere;Kryptografi
+ECC;Kryptografi med elliptiske kurver;Kryptografi
+HASHFUNCTION;Beregner digitalt fingeraftryk;Kryptografi
+SALT;Tilfældig værdi ved password-hashing;Kryptografi
+PASSWORDHASHING;Envejsbeskyttelse af adgangskoder;Kryptografi
+DIGITALSIGNATURE;Underskrift med privat nøgle;Kryptografi
+PKI;Infrastruktur for digitale certifikater;Kryptografi
+CERTIFICATEAUTHORITY;Udsteder af digitale certifikater;Kryptografi
+DIGITALCERTIFICATE;Elektronisk identitetsbevis;Kryptografi
+KEYEXCHANGE;Oprettelse af fælles nøglemateriale;Kryptografi
+DIFFIEHELLMAN;Klassisk nøgleudvekslingsmetode;Kryptografi
+PERFECTFORWARDSECRECY;Tidligere sessioner forbliver hemmelige;Kryptografi
+HMAC;Nøglebaseret hashkode til integritet;Kryptografi
+NONCE;Engangsværdi i kryptografi;Kryptografi
+IV;Startværdi ved visse krypteringsformer;Kryptografi
+CRYPTANALYSIS;Videnskaben om at analysere koder;Kryptografi
+BRUTEFORCE;Afprøver alle mulige kombinationer;Kryptografi
+QUANTUMCRYPTOGRAPHY;Kryptografi baseret på kvantefysik;Kryptografi
+POSTQUANTUMCRYPTOGRAPHY;Kryptografi til tiden med kvantecomputere;Kryptografi
+HACKING;Udforskning af computersystemer;Hacking og angreb
+ETHICALHACKING;Lovlig sikkerhedstest med hackerteknikker;Hacking og angreb
+PENETRATIONTESTING;Autoriseret angrebssimulering;Hacking og angreb
+REDTEAM;Offensivt sikkerhedshold;Hacking og angreb
+BLUETEAM;Defensivt sikkerhedshold;Hacking og angreb
+PURPLETEAM;Forbinder rødt og blåt sikkerhedshold;Hacking og angreb
+RECONNAISSANCE;Informationsindsamling før et angreb;Hacking og angreb
+FOOTPRINTING;Kortlægning af målets spor;Hacking og angreb
+ENUMERATION;Uddybende opregning af systemoplysninger;Hacking og angreb
+OSINT;Efterretninger fra åbne kilder;Hacking og angreb
+SOCIALENGINEERING;Angreb gennem menneskelig manipulation;Hacking og angreb
+PHISHING;Falsk besked som fisker efter oplysninger;Hacking og angreb
+SPEARPHISHING;Målrettet digital lokkebesked;Hacking og angreb
+WHALING;Phishing rettet mod chefer;Hacking og angreb
+VISHING;Svindel via telefonopkald;Hacking og angreb
+SMISHING;Svindel via SMS;Hacking og angreb
+CREDENTIALSTUFFING;Genbruger stjålne loginoplysninger;Hacking og angreb
+PASSWORDSPRAYING;Få passwords mod mange brugere;Hacking og angreb
+DICTIONARYATTACK;Passwordangreb baseret på ordbog;Hacking og angreb
+PRIVILEGEESCALATION;Opnår administratorrettigheder;Hacking og angreb
+LATERALMOVEMENT;Angriber bevæger sig sidelæns;Hacking og angreb
+PERSISTENCE;Angriber bevarer adgangen;Hacking og angreb
+SQLINJECTION;Indsætter SQL gennem input;Hacking og angreb
+CROSSSITESCRIPTING;Ondsindet script i webbrowser;Hacking og angreb
+CROSSSITEREQUESTFORGERY;Forfalsker webanmodning fra logget bruger;Hacking og angreb
+BUFFEROVERFLOW;Overskrider bufferens størrelse;Hacking og angreb
+REMOTECODEEXECUTION;Fjernudførelse af programkode;Hacking og angreb
+ZERODAY;Sårbarhed uden tilgængelig rettelse;Hacking og angreb
+SUPPLYCHAINATTACK;Angreb gennem leverandørkæden;Hacking og angreb
+MALWARE;Samleord for skadelig software;Malware
+VIRUS;Smitsom skadelig programkode;Malware
+WORM;Selvspredende computerorm;Malware
+TROJAN;Malware forklædt som nyttigt program;Malware
+RANSOMWARE;Digital afpresning med kryptering;Malware
+SPYWARE;Overvåger brugeren i det skjulte;Malware
+ADWARE;Reklamebaseret uønsket software;Malware
+ROOTKIT;Skjuler en angribers tilstedeværelse;Malware
+KEYLOGGER;Optager hvad brugeren taster;Malware
+BOTNET;Hær af kompromitterede computere;Malware
+BACKDOOR;Hemmelig vej ind i systemet;Malware
+LOGICBOMB;Kode udløst af særlig hændelse;Malware
+FILELESSMALWARE;Skadelig kode uden traditionel fil;Malware
+CRYPTOJACKING;Misbrug af CPU til mining;Malware
+POLYMORPHICMALWARE;Malware der ændrer sig løbende;Malware
+COMMANDANDCONTROL;Angriberens fjernstyringskanal;Malware
+PAYLOAD;Angrebets egentlige nyttelast;Malware
+DROPPER;Installerer anden malware;Malware
+SANDBOX;Isoleret testmiljø;Malware
+MALWAREANALYSIS;Undersøgelse af skadelig kode;Malware
+IAM;Styring af identitet og tilladelser;Identitet og adgang
+MFA;Login med flere typer faktorer;Identitet og adgang
+SSO;Ét login til flere systemer;Identitet og adgang
+RBAC;Adgangsstyring baseret på roller;Identitet og adgang
+ABAC;Adgangsstyring efter attributter;Identitet og adgang
+ACL;Liste over adgangsrettigheder;Identitet og adgang
+PAM;Kontrol af administrative konti;Identitet og adgang
+KERBEROS;Autentifikation med tickets;Identitet og adgang
+LDAP;Protokol til katalogopslag;Identitet og adgang
+ACTIVEDIRECTORY;Microsofts domænekatalog;Identitet og adgang
+OPENIDCONNECT;Loginprotokol oven på OAuth;Identitet og adgang
+SAML;XML-standard til identitetsføderation;Identitet og adgang
+PASSKEY;Passwordfri login med nøglepar;Identitet og adgang
+TOTP;Engangskode der skifter med tiden;Identitet og adgang
+SESSIONHIJACKING;Stjæler en aktiv login-session;Identitet og adgang
+SOC;Sikkerhedens overvågningscenter;Overvågning og respons
+SIEM;Central loganalyse for sikkerhed;Overvågning og respons
+SOAR;Automatisering af sikkerhedshændelser;Overvågning og respons
+EDR;Overvåger og reagerer på endpoints;Overvågning og respons
+XDR;Udvidet detektion og respons;Overvågning og respons
+NDR;Reaktion på trusler i netværkstrafik;Overvågning og respons
+INCIDENT;En konkret sikkerhedshændelse;Overvågning og respons
+INCIDENTRESPONSE;Reaktion på et cyberangreb;Overvågning og respons
+THREATHUNTING;Aktiv jagt på trusler;Overvågning og respons
+THREATINTELLIGENCE;Efterretninger om cybertrusler;Overvågning og respons
+IOC;Spor af en kompromittering;Overvågning og respons
+IOA;Tegn på angrebsadfærd;Overvågning og respons
+TTP;Angriberens metodebeskrivelse;Overvågning og respons
+MITREATTCK;Katalog over angriberes teknikker;Overvågning og respons
+CYBERKILLCHAIN;Angrebets faser som kæde;Overvågning og respons
+LOGANALYSIS;Analyse af hændelsesregistreringer;Overvågning og respons
+FALSEPOSITIVE;Falsk alarm;Overvågning og respons
+FALSENEGATIVE;Overset angreb;Overvågning og respons
+DIGITALFORENSICS;Digital kriminalteknisk undersøgelse;Overvågning og respons
+CHAINOFCUSTODY;Dokumentation af bevisers håndtering;Overvågning og respons
+CONTAINMENT;Begrænser udbredelsen af et angreb;Overvågning og respons
+ERADICATION;Udrydder angrebets årsag;Overvågning og respons
+RECOVERY;Genopretning efter angreb;Overvågning og respons
+PLAYBOOK;Trinvis procedure for sikkerhedshændelse;Overvågning og respons
+RISKASSESSMENT;Analyse af risici;Risikostyring og standarder
+RISKTREATMENT;Behandling af identificeret risiko;Risikostyring og standarder
+RESIDUALRISK;Tilbageværende risiko;Risikostyring og standarder
+RISKAPPETITE;Organisationens risikovillighed;Risikostyring og standarder
+BIA;Konsekvensanalyse af driftsstop;Risikostyring og standarder
+BCP;Plan for fortsat drift;Risikostyring og standarder
+DRP;Plan for katastrofegendannelse;Risikostyring og standarder
+RTO;Maksimal ønsket gendannelsestid;Risikostyring og standarder
+RPO;Acceptabelt datatab målt i tid;Risikostyring og standarder
+NISTCSF;Amerikansk cybersikkerhedsrammeværk;Risikostyring og standarder
+CISCONTROLS;Praktiske prioriterede sikkerhedstiltag;Risikostyring og standarder
+GDPR;Europæiske regler om persondata;Risikostyring og standarder
+DORA;Digital robusthed i finanssektoren;Risikostyring og standarder
+CVE;Identifikationsnummer for sårbarheder;Risikostyring og standarder
+CVSS;Sårbarheders alvorlighedsscore;Risikostyring og standarder
+CWE;Klassificerer software- og hardwaresvagheder;Risikostyring og standarder
+OWASP;Kendt organisation for websikkerhed;Risikostyring og standarder
+AUDIT;Sikkerhedsrevision;Risikostyring og standarder
+COMPLIANCE;Efterlevelse af krav;Risikostyring og standarder
+CLOUDSECURITY;Sikkerhed i skyen;Cloud og IoT
+SHAREDRESPONSIBILITYMODEL;Delt ansvar i cloud;Cloud og IoT
+IAAS;Infrastruktur som tjeneste;Cloud og IoT
+PAAS;Platform som tjeneste;Cloud og IoT
+SAAS;Software som tjeneste;Cloud og IoT
+CONTAINERSECURITY;Sikkerhed for containere;Cloud og IoT
+KUBERNETES;Orkestrering af containere;Cloud og IoT
+DEVSECOPS;Sikkerhed som del af DevOps;Cloud og IoT
+SAST;Kodeanalyse uden kørsel;Cloud og IoT
+DAST;Sikkerhedstest af kørende software;Cloud og IoT
+SBOM;Komponentliste for software;Cloud og IoT
+APISECURITY;Sikkerhed for softwaregrænseflader;Cloud og IoT
+WAF;Firewall foran webapplikation;Cloud og IoT
+IOTSECURITY;Sikkerhed for internetforbundne enheder;Cloud og IoT
+FIRMWARE;Indlejret software i hardware;Cloud og IoT
+SECUREBOOT;Kontrolleret og verificeret opstart;Cloud og IoT
+TPM;Betroet platformmodul;Cloud og IoT
+HSM;Hardwaremodul til sikring af nøgler;Cloud og IoT
+OTAUPDATE;Opdatering over netværket;Cloud og IoT
+SIDECHANNELATTACK;Angreb gennem eksempelvis strømforbrug;Cloud og IoT
