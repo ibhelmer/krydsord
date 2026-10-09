@@ -77,6 +77,8 @@ class Puzzle:
     placements: list[Placement] = field(default_factory=list)
     note: str = ""
     seed: int | None = None
+    blocked: list[tuple[int, int]] = field(default_factory=list)
+    secret_cells: list[tuple[int, int]] = field(default_factory=list)
 
     def renumber(self) -> None:
         starts = sorted({(p.row, p.col) for p in self.placements})
@@ -107,6 +109,13 @@ class Puzzle:
             raise ValueError("Seed skal være et heltal.")
         if len(self.placements) > 600:
             raise ValueError("Krydsordet indeholder for mange ord.")
+        if len(set(map(tuple, self.blocked))) != len(self.blocked) or len(set(map(tuple, self.secret_cells))) != len(self.secret_cells):
+            raise ValueError("Felter kan ikke vælges flere gange.")
+        for pos in self.blocked + self.secret_cells:
+            if (not isinstance(pos, (list, tuple)) or len(pos) != 2 or
+                any(type(n) is not int for n in pos) or
+                not (0 <= pos[0] < self.rows and 0 <= pos[1] < self.cols)):
+                raise ValueError("Et markeret felt ligger uden for gitteret.")
         occupied: dict[tuple[int, int], str] = {}
         owners: dict[tuple[int, int], list[int]] = {}
         seen_answers: set[str] = set()
@@ -135,6 +144,10 @@ class Puzzle:
                         raise ValueError("To ord må ikke overlappe i samme retning.")
                 occupied[pos] = letter
                 owners.setdefault(pos, []).append(index)
+        if set(map(tuple, self.blocked)) & occupied.keys():
+            raise ValueError("Et skillefelt må ikke indeholde et bogstav.")
+        if not set(map(tuple, self.secret_cells)) <= occupied.keys():
+            raise ValueError("Kodeordets felter skal indeholde bogstaver fra krydsordet.")
         actual = set()
         for (row, col), _ in occupied.items():
             for direction, (dr, dc) in DIRECTIONS.items():
@@ -162,10 +175,17 @@ class Puzzle:
             if len(reached) != len(self.placements):
                 raise ValueError("Alle ord skal hænge sammen via krydsninger.")
 
+    def codeword(self) -> str:
+        grid = self.grid()
+        return "".join(grid[r][c] for r, c in self.secret_cells)
+
     def without(self, index: int) -> Puzzle:
         if not 0 <= index < len(self.placements):
             raise ValueError("Vælg et ord i krydsordet.")
-        result = replace(self, placements=[p for i, p in enumerate(self.placements) if i != index])
+        remaining = [p for i, p in enumerate(self.placements) if i != index]
+        used = {(r, c) for p in remaining for r, c, _ in p.cells()}
+        result = replace(self, placements=remaining,
+                         secret_cells=[pos for pos in self.secret_cells if tuple(pos) in used])
         result.validate()
         result.renumber()
         return result
@@ -176,6 +196,7 @@ class Puzzle:
             "format": "krydsord", "version": 1,
             "rows": self.rows, "cols": self.cols, "title": self.title,
             "note": self.note, "seed": self.seed,
+            "blocked": self.blocked, "secret_cells": self.secret_cells,
             "placements": [
                 {"entry_id": p.entry.id, "word_id": p.entry.word_id,
                  "answer": p.entry.answer, "clue": p.entry.clue,
@@ -204,7 +225,9 @@ class Puzzle:
                                      item.get("entry_id", 0), item.get("word_id", 0))
                 placements.append(Placement(entry, item["row"], item["col"], item["direction"]))
             result = cls(obj["rows"], obj["cols"], obj["title"], placements,
-                         obj.get("note", ""), obj.get("seed"))
+                         obj.get("note", ""), obj.get("seed"),
+                         [tuple(x) for x in obj.get("blocked", [])],
+                         [tuple(x) for x in obj.get("secret_cells", [])])
             result.validate()
             result.renumber()
             return result
