@@ -91,10 +91,24 @@ class CrosswordGrid(Flowable):
             for col in range(self.puzzle.cols):
                 x, y = col * self.cell, self.height - (row + 1) * self.cell
                 used = bool(grid[row][col])
-                canvas.setFillColor(colors.white if used else INK)
+                blocked = (row, col) in self.puzzle.blocked
+                secret_index = (self.puzzle.secret_cells.index((row, col)) + 1
+                                if (row, col) in self.puzzle.secret_cells else None)
+                canvas.setFillColor(colors.HexColor("#ABB7C0") if blocked else
+                                    colors.HexColor("#FFF0B8") if secret_index else
+                                    colors.white if used else INK)
                 canvas.rect(x, y, self.cell, self.cell, fill=1, stroke=1)
                 if not used:
                     continue
+                if secret_index:
+                    canvas.setStrokeColor(colors.HexColor("#D58A1A"))
+                    canvas.setLineWidth(1.4)
+                    canvas.rect(x + 1, y + 1, self.cell - 2, self.cell - 2, stroke=1, fill=0)
+                    canvas.setLineWidth(0.45)
+                    canvas.setStrokeColor(INK)
+                    canvas.setFillColor(colors.HexColor("#9A5700"))
+                    canvas.setFont(self.bold, max(4.5, self.cell * .23))
+                    canvas.drawRightString(x + self.cell * .94, y + self.cell * .09, str(secret_index))
                 if (row, col) in starts:
                     canvas.setFillColor(INK)
                     canvas.setFont(self.regular, max(4.5, self.cell * 0.25))
@@ -155,6 +169,12 @@ def export_pdf(puzzle: Puzzle, path: str | Path, *, include_solution: bool = Fal
         story.append(Spacer(1, 4))
         story.append(CrosswordGrid(puzzle, regular, bold, solution))
         story.append(Spacer(1, 16))
+        if puzzle.secret_cells:
+            heading = ("KODEORD (feltnumrenes rækkefølge): " + puzzle.codeword()
+                       if solution else "KODEORD (feltnumrenes rækkefølge): " +
+                       "  ".join("__" for _ in puzzle.secret_cells))
+            story.append(Paragraph(escape(heading), styles["head"]))
+            story.append(Spacer(1, 12))
         across = sorted((p for p in puzzle.placements if p.direction == "across"), key=lambda p: p.number)
         down = sorted((p for p in puzzle.placements if p.direction == "down"), key=lambda p: p.number)
         def clue(p):
