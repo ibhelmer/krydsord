@@ -1,12 +1,24 @@
 # Kryds & Tværs Generator
 
-**Version 1.0.0 · Oktober 2026**
+**Version 1.1.0 · Oktober 2026**
 
 Et lokalt Python-program til at opbygge en orddatabase, konstruere krydsord og eksportere dem som PDF. Brugerfladen er på dansk. Python-navne og kodekommentarer er på engelsk.
 
 Programmet laver **nummererede krydsord med vandrette og lodrette ordforklaringer uden for gitteret**. Det laver ikke skandinaviske pilekrydsord med forklaringer inde i felterne.
 
-![Programmets brugerflade](examples/Brugerflade.png)
+
+
+## Skillefelter og skjult kodeord (v1.1)
+
+I fanen **Krydsord**, over gitteret, findes menuen **Klik-funktion**:
+
+- **Vælg position**: Almindelig manuel indsættelse af ord.
+- **Skillefelt til/fra**: Klik på et tomt felt for at markere det som et gråt skillefelt. Klik igen for at fjerne markeringen. Skillefelter kan ikke placeres oven på bogstaver, og ord kan ikke senere placeres i disse felter.
+- **Kodebogstav til/fra**: Klik på eksisterende bogstavfelter i den rækkefølge, de skal læses. Hvert valgt felt får gul baggrund og et lille sekvensnummer. Klik igen på et valgt felt for at fjerne det.
+
+**Ryd kodeord** fjerner alle kodeordsmarkeringer. Det skjulte ord fremgår af bogstaverne i den angivne rækkefølge og vises i facit. I opgave-PDF'en er det erstattet med tomme pladser, og kodeordsfelterne vises med gul markering og rækkefølgenumre.
+
+Valg af skillefelter og kodebogstaver gemmes i krydsordsfilen og i databasen. Gamle krydsord fra v1.0 kan stadig åbnes. Skillefelter placeres manuelt efter generering; automatisk generering starter et nyt gitter.
 
 ## Kom hurtigt i gang på Windows
 
