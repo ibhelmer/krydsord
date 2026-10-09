@@ -122,6 +122,77 @@ def place_word(puzzle: Puzzle, entry: Entry, row: int, col: int, direction: str)
     return result
 
 
+def place_word_with_dictionary(puzzle: Puzzle, entry: Entry, row: int, col: int,
+                               direction: str, lookup: Callable[[str], Entry | None]) -> Puzzle:
+    """Accept adjacent letters only if every newly formed run has a clue.
+
+    The original strict place_word remains unchanged for classic puzzles.
+    Existing placed runs must remain intact; newly formed runs become explicit
+    placements so they are numbered and exported normally.
+    """
+    puzzle.validate()
+    if direction not in DIRECTIONS:
+        raise ValueError("Vælg vandret eller lodret.")
+    if entry.answer in {p.entry.answer for p in puzzle.placements}:
+        raise ValueError("Ordet er allerede med i krydsordet.")
+    dr, dc = DIRECTIONS[direction]
+    cells = puzzle.grid()
+    blocked = set(map(tuple, puzzle.blocked))
+    before = {(r, c): ch for r, line in enumerate(cells) for c, ch in enumerate(line) if ch}
+    candidate = dict(before)
+    crosses = 0
+    for i, letter in enumerate(entry.answer):
+        r, c = row + dr*i, col + dc*i
+        if not (0 <= r < puzzle.rows and 0 <= c < puzzle.cols):
+            raise ValueError("Ordet ligger uden for gitteret.")
+        if (r,c) in blocked:
+            raise ValueError("Et skillefelt spærrer placeringen.")
+        existing = candidate.get((r,c))
+        if existing and existing != letter:
+            raise ValueError("Bogstaverne passer ikke i en krydsning.")
+        if existing:
+            crosses += 1
+        candidate[r,c] = letter
+    if before and not crosses and not any(
+        (r+rr,c+cc) in before
+        for i in range(len(entry.answer))
+        for r,c in [(row+dr*i,col+dc*i)]
+        for rr,cc in ((0,1),(0,-1),(1,0),(-1,0))):
+        raise ValueError("Ordet skal forbindes med det eksisterende krydsord.")
+    runs = {}
+    for (r,c) in candidate:
+        for d,(vr,vc) in DIRECTIONS.items():
+            if (r-vr,c-vc) in candidate:
+                continue
+            letters=[]
+            nr,nc=r,c
+            while (nr,nc) in candidate:
+                letters.append(candidate[nr,nc]);nr+=vr;nc+=vc
+            if len(letters)>=2:
+                runs[r,c,d]=''.join(letters)
+    old = {(p.row,p.col,p.direction):p.entry.answer for p in puzzle.placements}
+    for pos,answer in old.items():
+        if runs.get(pos) != answer:
+            raise ValueError("Placeringen forlænger eller ændrer et eksisterende ord. Fjern eller flyt det først.")
+    pos=(row,col,direction)
+    if runs.get(pos) != entry.answer:
+        raise ValueError("Der skal være plads før og efter det indsatte ord.")
+    additions=[Placement(entry,row,col,direction)]
+    for (r,c,d),answer in sorted(runs.items()):
+        if (r,c,d) in old or (r,c,d)==pos:
+            continue
+        match=lookup(answer)
+        if match is None:
+            raise ValueError(f"Det nye ord {answer} ({'vandret' if d == 'across' else 'lodret'}) mangler en ordforklaring i databasen.")
+        if match.answer != answer:
+            raise ValueError("Ordbogsopslaget gav et andet ord.")
+        additions.append(Placement(match,r,c,d))
+    result=replace(puzzle,placements=puzzle.placements+additions)
+    result.validate()
+    result.renumber()
+    return result
+
+
 @dataclass
 class GenerationResult:
     puzzle: Puzzle
