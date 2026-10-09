@@ -440,6 +440,8 @@ class Application(tk.Tk):
             return
         canvas, puzzle = self.canvas, self.puzzle
         canvas.delete("all")
+        # Redrawing must never perform database searches. A large imported
+        # dictionary can otherwise make the whole editor appear blank/frozen.
         cell = max(17, min(36, (canvas.winfo_width() - 50) / puzzle.cols,
                              (canvas.winfo_height() - 50) / puzzle.rows))
         self.cell_size, self.grid_offset = cell, 29
@@ -480,9 +482,9 @@ class Application(tk.Tk):
                 direction = DIRECTION_LABELS[self.manual_direction.get()]
                 if self.allow_adjacent_var.get():
                     try:
-                        place_word_with_dictionary(puzzle, self.pending_entry, row, col,
-                                                   direction, self._dictionary_lookup())
-                        valid = True
+                        # Only preview letter conflicts here; complete dictionary
+                        # validation happens when the user presses Insert word.
+                        valid = self._quick_preview_valid(row, col, direction)
                     except ValueError:
                         valid = False
                 else:
@@ -500,6 +502,22 @@ class Application(tk.Tk):
                 canvas.create_rectangle(x + 1, y + 1, x + cell - 1, y + cell - 1, outline="#176D78", width=2)
         except (ValueError, KeyError, tk.TclError):
             pass
+
+    def _quick_preview_valid(self, row: int, col: int, direction: str) -> bool:
+        if self.pending_entry is None:
+            return False
+        dr, dc = DIRECTIONS[direction]
+        grid = self.puzzle.grid()
+        for i, letter in enumerate(self.pending_entry.answer):
+            r, c = row + i * dr, col + i * dc
+            if not (0 <= r < self.puzzle.rows and 0 <= c < self.puzzle.cols):
+                return False
+            if (r, c) in self.puzzle.blocked:
+                return False
+            existing = grid[r][c]
+            if existing and existing != letter:
+                return False
+        return True
 
     def grid_click(self, event):
         if self.busy:
