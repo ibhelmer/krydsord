@@ -1,0 +1,145 @@
+word;clue;category
+SOL;Stjernen, der lyser på Jorden;Natur
+MÅNE;Jordens naturlige satellit;Natur
+STJERNE;Lysende himmellegeme;Natur
+REGN;Vanddråber, der falder fra skyer;Natur
+SNE;Hvid nedbør af iskrystaller;Natur
+VIND;Luft i bevægelse;Natur
+SKY;Samling af små vanddråber eller iskrystaller på himlen;Natur
+TÅGE;Sky, der ligger tæt ved jorden;Natur
+FROST;Kulde under vandets frysepunkt;Natur
+IS;Vand i fast form;Natur
+HAV;Stort område med saltvand;Natur
+SØ;Vandområde omgivet af land;Natur
+BÆK;Lille vandløb;Natur
+FLOD;Stort vandløb;Natur
+SKOV;Område med mange træer;Natur
+TRÆ;Plante med en vedagtig stamme;Natur
+GREN;Del af et træ, som vokser ud fra stammen;Natur
+ROD;Plantedel, som ofte optager vand fra jorden;Natur
+BLAD;Ofte grøn del af en plante;Natur
+BLOMST;Farverig plantedel, der kan tiltrække bier;Natur
+GRÆS;Grønt plantedække i en plæne;Natur
+MOS;Lille grøn plante, der ofte vokser på fugtige steder;Natur
+STEN;Hårdt stykke af en bjergart;Natur
+SAND;Små mineralkorn, som findes på en strand;Natur
+STRAND;Område langs kanten af havet;Natur
+BAKKE;Mindre forhøjning i landskabet;Natur
+DAL;Lavning mellem bakker eller bjerge;Natur
+BJERG;Stor naturlig forhøjning i landskabet;Natur
+FUGL;Dyr med fjer og næb;Natur
+ØRN;Stor rovfugl;Natur
+UGLE;Fugl, som ofte jager om natten;Natur
+SVANE;Stor vandfugl med lang hals;Natur
+AND;Vandfugl med bredt næb;Natur
+RAVN;Stor sort fugl i kragefamilien;Natur
+FISK;Vanddyr, som normalt ånder med gæller;Natur
+LAKS;Fisk, der kan vandre mellem hav og vandløb;Natur
+TORSK;Havfisk med skægtråd under hagen;Natur
+ÅL;Langstrakt fisk, der ligner en slange;Natur
+SÆL;Havpattedyr, som ofte hviler på sandbanker;Natur
+HVAL;Stort havpattedyr;Natur
+KRABBE;Krebsdyr med klosakse;Natur
+REJE;Lille krebsdyr, som også spises;Natur
+HUND;Husdyr, der gør;Dyr
+KAT;Husdyr, der miaver;Dyr
+MUS;Lille gnaver med lang hale;Dyr
+HEST;Dyr, man kan ride på;Dyr
+KO;Husdyr, der giver mælk;Dyr
+FÅR;Husdyr, der giver uld;Dyr
+GED;Husdyr, der ofte har horn og skæg;Dyr
+GRIS;Husdyr, der grynter;Dyr
+RÆV;Vildt dyr med busket hale;Dyr
+HARE;Dyr med lange ører og kraftige bagben;Dyr
+HJORT;Drøvtygger, hvis han ofte bærer gevir;Dyr
+ULV;Vildt hundedyr, som ofte lever i flok;Dyr
+BJØRN;Stort pattedyr med kraftige kløer;Dyr
+BI;Insekt, som kan producere honning;Dyr
+MYRE;Lille insekt, der lever i kolonier;Dyr
+ORM;Aflangt dyr uden ben;Dyr
+SNEGL;Bløddyr, som ofte bærer hus på ryggen;Dyr
+FRØ;Lille springende padde;Dyr
+HUS;Bygning, man kan bo i;Hverdag
+TAG;Øverste overdækning på et hus;Hverdag
+DØR;Åbnes, når man går ind i et rum;Hverdag
+VINDUE;Åbning med glas i en væg;Hverdag
+GULV;Fladen, man går på indendørs;Hverdag
+VÆG;Lodret flade, der afgrænser et rum;Hverdag
+BORD;Møbel med en plade på ben;Hverdag
+STOL;Møbel til én siddende person;Hverdag
+SENG;Møbel, man sover i;Hverdag
+SOFA;Polstret møbel til flere siddende personer;Hverdag
+LAMPE;Genstand, der giver lys;Hverdag
+UR;Viser, hvad klokken er;Hverdag
+BOG;Samling af sider med tekst eller billeder;Hverdag
+PEN;Redskab, man skriver med;Hverdag
+PAPIR;Materiale, man kan skrive og tegne på;Hverdag
+NØGLE;Bruges til at åbne en lås;Hverdag
+LÅS;Mekanisme, der holder noget aflåst;Hverdag
+TASKE;Bruges til at bære ting i;Hverdag
+SKO;Fodtøj, man går i;Hverdag
+HAT;Beklædning, man sætter på hovedet;Hverdag
+JAKKE;Overtøj til overkroppen;Hverdag
+CYKEL;Tohjulet køretøj med pedaler;Hverdag
+BIL;Motorkøretøj med typisk fire hjul;Hverdag
+TOG;Køretøj, der kører på skinner;Hverdag
+BUS;Stort køretøj til mange passagerer;Hverdag
+BRO;Bygværk, der fører over eksempelvis et vandløb;Hverdag
+VEJ;Færdselsåre for blandt andet biler;Hverdag
+KORT;Tegning, der viser et geografisk område;Hverdag
+RADIO;Apparat til at modtage udsendelser med lyd;Hverdag
+ÆBLE;Frugt, der kan være rød eller grøn;Mad
+PÆRE;Frugt, der ofte er smal foroven;Mad
+BANAN;Aflang frugt med gul skræl, når den er moden;Mad
+CITRON;Gul citrusfrugt med syrlig smag;Mad
+APPELSIN;Orange citrusfrugt;Mad
+BRØD;Bagt madvare, der ofte laves af mel;Mad
+MEL;Fint formalet korn, der bruges til bagning;Mad
+MÆLK;Hvid drik, som blandt andet kommer fra køer;Mad
+OST;Mejeriprodukt, som kan lægges på brød;Mad
+SMØR;Mejeriprodukt fremstillet af fløde;Mad
+ÆG;Kan koges, spejles eller bruges i en omelet;Mad
+RIS;Små korn, som ofte serveres som tilbehør;Mad
+PASTA;Mad af dej, formet som eksempelvis rør eller bånd;Mad
+SALT;Krydderi, der blandt andet udvindes af havvand;Mad
+PEBER;Krydderi, der kan fås som sorte korn;Mad
+SUKKER;Sødt stof, der blandt andet bruges i kager;Mad
+KAFFE;Varm drik lavet af ristede bønner;Mad
+TE;Drik lavet ved at hælde varmt vand over blade;Mad
+VAND;Klar væske, som man kan slukke tørsten med;Mad
+SUPPE;Ret, der hovedsageligt består af væske;Mad
+KAGE;Sødt bagværk;Mad
+HONNING;Sødt produkt fremstillet af bier;Mad
+KARTOFFEL;Knold, der kan koges, bages eller moses;Mad
+GULEROD;Rodfrugt, der ofte er orange;Mad
+LØG;Grøntsag, som kan få øjnene til at løbe i vand;Mad
+TOMAT;Rød frugt, der ofte bruges som grøntsag;Mad
+SALAT;Ret af eksempelvis blandede rå grøntsager;Mad
+AGURK;Aflang grøn grøntsag med stort vandindhold;Mad
+KODE;Instruktioner skrevet i et programmeringssprog;IT
+DATA;Oplysninger, som kan behandles af en computer;IT
+SERVER;Computer eller program, der leverer en tjeneste til andre;IT
+ROUTER;Enhed, der videresender pakker mellem netværk;IT
+NETVÆRK;Forbundne enheder, der kan udveksle data;IT
+PAKKE;Afgrænset enhed af data, der sendes over et netværk;IT
+FIL;Navngiven samling af data på et lagermedie;IT
+MAPPE;Beholder til organisering af filer;IT
+SKÆRM;Viser computerens billeder og tekst;IT
+TASTATUR;Enhed med taster til indtastning;IT
+MUS;Pegeenhed, der bruges til at styre en markør;IT
+PROGRAM;Samling af instruktioner, som en computer kan udføre;IT
+DATABASE;Organiseret samling af data;IT
+PYTHON;Programmeringssprog opkaldt efter en britisk komikergruppe;IT
+KABEL;Ledning til eksempelvis data eller strøm;IT
+PORT;Nummereret kommunikationsendepunkt i en transportprotokol;IT
+BIT;Binært ciffer, der kan være nul eller ét;IT
+BYTE;Enhed, der normalt består af otte bit;IT
+LØKKE;Programstruktur, der gentager instruktioner;IT
+VARIABEL;Navn, som i et program forbindes med en værdi;IT
+FUNKTION;Navngivet programdel, der kan kaldes;IT
+KLASSE;Skabelon for objekter i objektorienteret programmering;IT
+ORD;Det, man finder frem til ud fra en ordforklaring;Sprog
+BOGSTAV;Tegn i et alfabet;Sprog
+SPROG;System af ord og regler til kommunikation;Sprog
+SÆTNING;Sammenhængende gruppe af ord, der udtrykker en mening;Sprog
+ORD;Sproglig enhed, som kan slås op i en ordbog;Sprog
