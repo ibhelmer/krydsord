@@ -1,0 +1,211 @@
+{
+  "format": "krydsord",
+  "version": 1,
+  "rows": 17,
+  "cols": 17,
+  "title": "Hverdagskryds",
+  "note": "",
+  "seed": 42,
+  "placements": [
+    {
+      "entry_id": 94,
+      "word_id": 94,
+      "answer": "APPELSIN",
+      "clue": "Orange citrusfrugt",
+      "category": "Mad",
+      "row": 4,
+      "col": 8,
+      "direction": "down"
+    },
+    {
+      "entry_id": 122,
+      "word_id": 122,
+      "answer": "NETVÆRK",
+      "clue": "Forbundne enheder, der kan udveksle data",
+      "category": "IT",
+      "row": 7,
+      "col": 7,
+      "direction": "across"
+    },
+    {
+      "entry_id": 111,
+      "word_id": 111,
+      "answer": "HONNING",
+      "clue": "Sødt produkt fremstillet af bier",
+      "category": "Mad",
+      "row": 11,
+      "col": 6,
+      "direction": "across"
+    },
+    {
+      "entry_id": 25,
+      "word_id": 25,
+      "answer": "STRAND",
+      "clue": "Område langs kanten af havet",
+      "category": "Natur",
+      "row": 9,
+      "col": 8,
+      "direction": "across"
+    },
+    {
+      "entry_id": 139,
+      "word_id": 138,
+      "answer": "KLASSE",
+      "clue": "Skabelon for objekter i objektorienteret programmering",
+      "category": "IT",
+      "row": 4,
+      "col": 6,
+      "direction": "across"
+    },
+    {
+      "entry_id": 37,
+      "word_id": 37,
+      "answer": "TORSK",
+      "clue": "Havfisk med skægtråd under hagen",
+      "category": "Natur",
+      "row": 3,
+      "col": 13,
+      "direction": "down"
+    },
+    {
+      "entry_id": 131,
+      "word_id": 130,
+      "answer": "PYTHON",
+      "clue": "Programmeringssprog opkaldt efter en britisk komikergruppe",
+      "category": "IT",
+      "row": 8,
+      "col": 6,
+      "direction": "down"
+    },
+    {
+      "entry_id": 53,
+      "word_id": 53,
+      "answer": "HJORT",
+      "clue": "Drøvtygger, hvis han ofte bærer gevir",
+      "category": "Dyr",
+      "row": 10,
+      "col": 2,
+      "direction": "across"
+    },
+    {
+      "entry_id": 3,
+      "word_id": 3,
+      "answer": "STJERNE",
+      "clue": "Lysende himmellegeme",
+      "category": "Natur",
+      "row": 13,
+      "col": 1,
+      "direction": "across"
+    },
+    {
+      "entry_id": 120,
+      "word_id": 120,
+      "answer": "SERVER",
+      "clue": "Computer eller program, der leverer en tjeneste til andre",
+      "category": "IT",
+      "row": 4,
+      "col": 10,
+      "direction": "down"
+    },
+    {
+      "entry_id": 78,
+      "word_id": 78,
+      "answer": "TASKE",
+      "clue": "Bruges til at bære ting i",
+      "category": "Hverdag",
+      "row": 1,
+      "col": 6,
+      "direction": "down"
+    },
+    {
+      "entry_id": 115,
+      "word_id": 115,
+      "answer": "TOMAT",
+      "clue": "Rød frugt, der ofte bruges som grøntsag",
+      "category": "Mad",
+      "row": 1,
+      "col": 6,
+      "direction": "across"
+    },
+    {
+      "entry_id": 8,
+      "word_id": 8,
+      "answer": "TÅGE",
+      "clue": "Sky, der ligger tæt ved jorden",
+      "category": "Natur",
+      "row": 5,
+      "col": 3,
+      "direction": "across"
+    },
+    {
+      "entry_id": 103,
+      "word_id": 103,
+      "answer": "SALT",
+      "clue": "Krydderi, der blandt andet udvindes af havvand",
+      "category": "Mad",
+      "row": 2,
+      "col": 3,
+      "direction": "down"
+    },
+    {
+      "entry_id": 44,
+      "word_id": 44,
+      "answer": "KAT",
+      "clue": "Husdyr, der miaver",
+      "category": "Dyr",
+      "row": 3,
+      "col": 2,
+      "direction": "across"
+    },
+    {
+      "entry_id": 99,
+      "word_id": 99,
+      "answer": "SMØR",
+      "clue": "Mejeriprodukt fremstillet af fløde",
+      "category": "Mad",
+      "row": 6,
+      "col": 13,
+      "direction": "across"
+    },
+    {
+      "entry_id": 7,
+      "word_id": 7,
+      "answer": "SKY",
+      "clue": "Samling af små vanddråber eller iskrystaller på himlen",
+      "category": "Natur",
+      "row": 13,
+      "col": 1,
+      "direction": "down"
+    },
+    {
+      "entry_id": 121,
+      "word_id": 121,
+      "answer": "ROUTER",
+      "clue": "Enhed, der videresender pakker mellem netværk",
+      "category": "IT",
+      "row": 9,
+      "col": 4,
+      "direction": "down"
+    },
+    {
+      "entry_id": 112,
+      "word_id": 112,
+      "answer": "KARTOFFEL",
+      "clue": "Knold, der kan koges, bages eller moses",
+      "category": "Mad",
+      "row": 4,
+      "col": 16,
+      "direction": "down"
+    },
+    {
+      "entry_id": 80,
+      "word_id": 80,
+      "answer": "HAT",
+      "clue": "Beklædning, man sætter på hovedet",
+      "category": "Hverdag",
+      "row": 0,
+      "col": 9,
+      "direction": "down"
+    }
+  ]
+}
