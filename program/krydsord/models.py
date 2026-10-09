@@ -118,7 +118,7 @@ class Puzzle:
                 raise ValueError("Et markeret felt ligger uden for gitteret.")
         occupied: dict[tuple[int, int], str] = {}
         owners: dict[tuple[int, int], list[int]] = {}
-        seen_answers: set[str] = set()
+        seen_placements: set[tuple[int, int, str, str]] = set()
         expected = set()
         for index, p in enumerate(self.placements):
             if type(p.row) is not int or type(p.col) is not int:
@@ -129,9 +129,10 @@ class Puzzle:
                 raise ValueError("Svaret er ikke normaliseret.")
             clean_text(p.entry.clue, "Ordforklaringen", 500)
             clean_text(p.entry.category, "Kategorien", 80, required=False)
-            if p.entry.answer in seen_answers:
-                raise ValueError(f"Ordet {p.entry.answer} er brugt mere end én gang.")
-            seen_answers.add(p.entry.answer)
+            placement_key = (p.row, p.col, p.direction, p.entry.answer)
+            if placement_key in seen_placements:
+                raise ValueError("Den samme placering er tilføjet to gange.")
+            seen_placements.add(placement_key)
             expected.add((p.row, p.col, p.direction, p.entry.answer))
             for row, col, letter in p.cells():
                 if not (0 <= row < self.rows and 0 <= col < self.cols):
