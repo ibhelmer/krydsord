@@ -1,12 +1,16 @@
 # Kryds & Tværs Generator
 
-**Version 1.1.0 · Oktober 2026**
+**Version 1.1.1 · Oktober 2026**
 
 Et lokalt Python-program til at opbygge en orddatabase, konstruere krydsord og eksportere dem som PDF. Brugerfladen er på dansk. Python-navne og kodekommentarer er på engelsk.
 
 Programmet laver **nummererede krydsord med vandrette og lodrette ordforklaringer uden for gitteret**. Det laver ikke skandinaviske pilekrydsord med forklaringer inde i felterne.
 
 
+
+## Om og hjælp (v1.1.1)
+
+Klik på **Om** øverst i programmets hovedvindue (eller vælg **Hjælp / Om** i menuen) for brugervejledning, version, copyright samt et klikbart link til https://github.com/ibhelmer/krydsord.
 
 ## Skillefelter og skjult kodeord (v1.1)
 
