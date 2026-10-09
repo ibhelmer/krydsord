@@ -8,6 +8,7 @@ from pathlib import Path
 import queue
 import sqlite3
 import threading
+import webbrowser
 import tkinter as tk
 from tkinter import filedialog, messagebox, simpledialog, ttk
 
@@ -183,6 +184,7 @@ class Application(tk.Tk):
         banner.pack(fill="x")
         tk.Label(banner, text="Kryds & Tværs", font=("Segoe UI", 24, "bold"),
                  background="#203744", foreground="white").pack(side="left")
+        ttk.Button(banner, text="Om", command=self.about).pack(side="right", padx=(14, 0))
         tk.Label(banner, text="ORDBOG  /  KONSTRUKTION  /  PDF", font=("Segoe UI", 10),
                  background="#203744", foreground="#C7DADD").pack(side="right")
         self.tabs = ttk.Notebook(self)
@@ -912,40 +914,82 @@ class Application(tk.Tk):
             messagebox.showinfo("Sikkerhedskopi oprettet", "Orddatabasen og alle gemte krydsord er kopieret.\nIkke-gemte ændringer er ikke med i sikkerhedskopien.", parent=self)
 
     def about(self):
+        """Show usage instructions, version, copyright and GitHub project link."""
+        repo_url = "https://github.com/ibhelmer/krydsord"
         dialog = tk.Toplevel(self)
-        dialog.title("Hjælp / Om Kryds & Tværs Generator")
-        dialog.geometry("770x650")
-        content = tk.Text(dialog, wrap="word", font=("Segoe UI", 11), padx=20, pady=20,
-                          background="white", relief="flat")
-        content.pack(fill="both", expand=True)
-        content.insert("1.0", f"KRYDS & TVÆRS GENERATOR {__version__}\n\n"
-                       "1. ORDDATABASE\nTilføj svar og ordforklaringer. Et ord kan have flere forklaringer. "
-                       "Søg med fritekst, kategori eller mønster, fx ?A? for tre bogstaver med A i midten. "
-                       "Æ, Ø og Å optager ét felt hver. Mindst to bogstaver pr. ord.\n\n"
-                       "2. AUTOMATISK KONSTRUKTION\nVælg gitterstørrelse og ønsket antal ord. "
-                       "Vælg en kategori eller markér bestemte forklaringer i orddatabasen og slå 'Kun markerede' til. "
-                       "Begge filtre gælder samtidig. Flere forklaringer til samme ord giver stadig kun ét svar i gitteret. "
-                       "Generér et forslag. Tomt seed giver nye forsøg. 'Stop søgning' beholder bedste fundne forslag.\n\n"
-                       "3. MANUEL KONSTRUKTION\nVælg en forklaring i orddatabasen og klik 'Brug i krydsord'. "
-                       "Klik på et startfelt, vælg retning og indsæt. 'Foreslå placering' viser gyldige muligheder. "
-                       "Ord skal krydse et eksisterende ord, undtagen det første. Et ord kan fjernes, "
-                       "hvis de tilbageværende ord stadig hænger sammen.\n\n"
-                       "4. GEM OG EKSPORTÉR\nOrdbogsændringer gemmes automatisk. Krydsord skal gemmes med Gem/Ctrl+S. "
-                       "PDF kan indeholde kun opgaven, opgave plus facit eller kun facit. "
-                       "JSON-filer er redigerbare og indeholder svarene.\n\n"
-                       "AFGRÆNSNING\nDette er nummererede krydsord med forklaringer uden for gitteret, "
-                       "ikke skandinaviske pilekrydsord med forklaringer inde i felterne. "
-                       "Generatoren bruger en randomiseret multi-start greedy-heuristik; "
-                       "den garanterer ikke fuld udfyldning, symmetri eller placering af alle ønskede ord. "
-                       "De medfølgende eksempelord er en lille redigerbar startordbog, ikke en komplet dansk ordbog.\n\n"
-                       f"DATA PÅ DENNE COMPUTER\n{self.db.path}\n\n"
-                       "Teknologi: Python, Tkinter, SQLite og ReportLab. Se README.md for installation, "
-                       "algoritme, databaseformat og sikkerhedskopiering.")
+        dialog.title(f"Om Kryds & Tværs Generator – {__version__}")
+        dialog.geometry("800x700")
+        dialog.minsize(630, 450)
+        dialog.transient(self)
+
+        heading = ttk.Frame(dialog, padding=(20, 15))
+        heading.pack(fill="x")
+        ttk.Label(heading, text="Kryds & Tværs Generator", font=("Segoe UI", 18, "bold")).pack(anchor="w")
+        ttk.Label(heading, text=f"Version {__version__}  ·  Oktober 2026  ·  © 2026 Ib Helmer Nielsen",
+                  style="Muted.TLabel").pack(anchor="w", pady=(5, 0))
+
+        body = ttk.Frame(dialog, padding=(20, 0, 20, 0))
+        body.pack(fill="both", expand=True)
+        scroll = ttk.Scrollbar(body, orient="vertical")
+        content = tk.Text(body, wrap="word", font=("Segoe UI", 10), padx=13, pady=13,
+                          background="white", relief="flat", yscrollcommand=scroll.set)
+        scroll.configure(command=content.yview)
+        scroll.pack(side="right", fill="y")
+        content.pack(side="left", fill="both", expand=True)
+        description = (
+            "SÅDAN VIRKER PROGRAMMET\n"
+            "Programmet opbygger nummererede krydsord med vandrette og lodrette "
+            "ordforklaringer og eksporterer opgave og facit til PDF.\n\n"
+            "1. ORDDATABASE\n"
+            "Tilføj, redigér eller slet svarord og korte ordforklaringer under fanen "
+            "Orddatabase. Et ord kan have flere forklaringer. Søg på kategori, "
+            "fritekst eller mønster (fx ?A?). Importér og eksportér CSV med "
+            "kolonnerne word;clue;category. Æ, Ø og Å understøttes.\n\n"
+            "2. GENERÉR KRYDSORD\n"
+            "Under Krydsord vælger du gitterstørrelse, målantallet af ord og "
+            "eventuelt kategori eller markerede ordforklaringer. Tryk på "
+            "Generér forslag. Generatoren søger efter kombinationer af ord, "
+            "der krydser hinanden. Den kan ikke garantere, at alle ord placeres.\n\n"
+            "3. REDIGÉR GITTERET\n"
+            "Vælg et ord fra orddatabasen, startfelt og retning for manuel "
+            "placering. Brug Foreslå placering til at finde gyldige felter. "
+            "Du kan fjerne ord og rette deres forklaringer.\n\n"
+            "4. SKILLEFELTER\n"
+            "Vælg 'Skillefelt til/fra' i Klik-funktion-menuen og klik på et tomt "
+            "felt for at indsætte eller fjerne et gråt skillefelt. Et skillefelt "
+            "kan ikke dække en eksisterende bogstavplacering.\n\n"
+            "5. HEMMELIGT KODEORD\n"
+            "Vælg 'Kodebogstav til/fra', og klik på bogstaverne i den rækkefølge, "
+            "som danner kodeordet. Numrene i de gule felter viser rækkefølgen. "
+            "'Ryd kodeord' nulstiller markeringerne. Opgaven viser tomme "
+            "kodeordsfelter; løsningen står i facit.\n\n"
+            "6. GEM OG EKSPORTÉR\n"
+            "Orddatabasen gemmes automatisk. Krydsord gemmes særskilt med "
+            "Gem (Ctrl+S) og kan åbnes under Gemte krydsord. Eksportér PDF "
+            "som opgave, opgave med facit eller kun facit. JSON kan også "
+            "eksporteres og importeres.\n\n"
+            "TEKNIK OG BEGRÆNSNINGER\n"
+            "Python, Tkinter, SQLite og ReportLab. Generatoren bruger en "
+            "randomiseret multi-start greedy-heuristik. Krydsordet er af den "
+            "nummererede type med forklaringer uden for gitteret, ikke et "
+            "skandinavisk pilekrydsord.\n\n"
+            "COPYRIGHT\n"
+            "© 2026 Ib Helmer Nielsen. Se repositoryets LICENSE og NOTICE "
+            "for licens- og ophavsretsoplysninger.\n\n"
+            f"DATABASE PÅ DENNE COMPUTER\n{self.db.path}\n"
+        )
+        content.insert("1.0", description)
         content.configure(state="disabled")
-        scrollbar = ttk.Scrollbar(dialog, command=content.yview)
-        scrollbar.pack(side="right", fill="y", before=content)
-        content.configure(yscrollcommand=scrollbar.set)
-        ttk.Button(dialog, text="Luk", command=dialog.destroy).pack(pady=10)
+        footer = ttk.Frame(dialog, padding=(20, 12))
+        footer.pack(fill="x")
+        link = tk.Label(footer, text=repo_url, fg="#126C85", cursor="hand2",
+                        font=("Segoe UI", 10, "underline"))
+        link.pack(side="left")
+        link.bind("<Button-1>", lambda _event: webbrowser.open(repo_url))
+        ttk.Button(footer, text="Åbn GitHub", command=lambda: webbrowser.open(repo_url)).pack(side="right", padx=(8, 0))
+        ttk.Button(footer, text="Luk", command=dialog.destroy).pack(side="right")
+        dialog.bind("<Escape>", lambda _event: dialog.destroy())
+        dialog.focus_set()
 
     @action
     def close_app(self):
