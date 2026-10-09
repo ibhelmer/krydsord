@@ -24,6 +24,7 @@ BITS = {"across": 1, "down": 2}
 class Board:
     def __init__(self, puzzle: Puzzle):
         self.rows, self.cols = puzzle.rows, puzzle.cols
+        self.blocked = set(map(tuple, puzzle.blocked))
         self.cells: dict[tuple[int, int], str] = {}
         self.masks: dict[tuple[int, int], int] = {}
         self.letters: dict[str, list[tuple[int, int]]] = defaultdict(list)
@@ -47,6 +48,8 @@ class Board:
         crosses = 0
         for index, letter in enumerate(entry.answer):
             r, c = row + dr * index, col + dc * index
+            if (r, c) in self.blocked:
+                return False, "Et skillefelt spærrer placeringen.", 0
             existing = self.cells.get((r, c))
             if existing:
                 if existing != letter:
