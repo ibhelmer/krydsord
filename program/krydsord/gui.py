@@ -14,7 +14,7 @@ from tkinter import filedialog, messagebox, simpledialog, ttk
 
 from . import __version__
 from .database import Database
-from .generator import Board, generate, place_word
+from .generator import Board, generate, place_word, place_word_with_dictionary
 from .models import Entry, Placement, Puzzle, clean_text
 
 ALL_CATEGORIES = "Alle kategorier"
@@ -151,6 +151,7 @@ class Application(tk.Tk):
         self.manual_row = tk.StringVar(value="9")
         self.manual_col = tk.StringVar(value="9")
         self.manual_direction = tk.StringVar(value="Vandret")
+        self.allow_adjacent_var = tk.BooleanVar(value=False)
         self.selected_word_var = tk.StringVar(value="Intet ord valgt")
         self.selected_clue_var = tk.StringVar(value="Vælg en ordforklaring fra orddatabasen.")
         for var in (self.title_var, self.note_var):
@@ -303,6 +304,8 @@ class Application(tk.Tk):
             self._spin(position, variable, 1, 35, 4).pack(side="left", padx=(0, 10))
         ttk.Combobox(position, textvariable=self.manual_direction, values=list(DIRECTION_LABELS),
                      state="readonly", width=9).pack(side="left")
+        ttk.Checkbutton(manual, text="Tillad naboord fra orddatabasen",
+                        variable=self.allow_adjacent_var).pack(anchor="w", pady=(5, 0))
         actions = ttk.Frame(manual)
         actions.pack(fill="x", pady=(8, 0))
         ttk.Button(actions, text="Foreslå placering", command=self.suggest_position).pack(side="left", padx=(0, 7))
@@ -475,7 +478,15 @@ class Application(tk.Tk):
             row, col = int(self.manual_row.get()) - 1, int(self.manual_col.get()) - 1
             if self.pending_entry:
                 direction = DIRECTION_LABELS[self.manual_direction.get()]
-                valid, _, _ = Board(puzzle).check(self.pending_entry, row, col, direction)
+                if self.allow_adjacent_var.get():
+                    try:
+                        place_word_with_dictionary(puzzle, self.pending_entry, row, col,
+                                                   direction, self._dictionary_lookup())
+                        valid = True
+                    except ValueError:
+                        valid = False
+                else:
+                    valid, _, _ = Board(puzzle).check(self.pending_entry, row, col, direction)
                 color = "#167C66" if valid else "#BD4A4A"
                 for r, c, letter in Placement(self.pending_entry, row, col, direction).cells():
                     if 0 <= r < puzzle.rows and 0 <= c < puzzle.cols:
@@ -728,6 +739,13 @@ class Application(tk.Tk):
         self.status_var.set("Klik på et startfelt, vælg retning og indsæt ordet. Grøn ramme betyder gyldig placering.")
         self.draw_grid()
 
+    def _dictionary_lookup(self):
+        """An exact-word lookup; prefer the first available clue per answer."""
+        known = {}
+        for candidate in self.db.entries():
+            known.setdefault(candidate.answer, candidate)
+        return known.get
+
     @action
     def suggest_position(self):
         self._ensure_idle()
@@ -735,6 +753,20 @@ class Application(tk.Tk):
             raise ValueError("Vælg først et ord med 'Brug i krydsord' i orddatabasen.")
         board = Board(self.puzzle)
         positions = board.candidates(self.pending_entry)
+        if self.allow_adjacent_var.get():
+            # Candidate enumeration for dense mode must include positions where
+            # contact creates dictionary-backed words, not just strict crossings.
+            lookup = self._dictionary_lookup()
+            positions = []
+            for direction, (dr, dc) in DIRECTIONS.items():
+                for r in range(self.puzzle.rows - dr * (len(self.pending_entry.answer) - 1)):
+                    for c in range(self.puzzle.cols - dc * (len(self.pending_entry.answer) - 1)):
+                        try:
+                            updated = place_word_with_dictionary(self.puzzle, self.pending_entry,
+                                                                 r, c, direction, lookup)
+                        except ValueError:
+                            continue
+                        positions.append((r, c, direction, len(updated.placements) - len(self.puzzle.placements)))
         if not positions:
             raise ValueError("Ingen gyldig placering fundet for dette ord i det nuværende gitter.")
         positions.sort(key=lambda p: (-p[3], p[0], p[1], p[2]))
@@ -753,9 +785,13 @@ class Application(tk.Tk):
         if self.pending_entry is None:
             raise ValueError("Vælg først et ord i orddatabasen.")
         self._sync_metadata()
-        self.puzzle = place_word(self.puzzle, self.pending_entry,
-                                 int(self.manual_row.get()) - 1, int(self.manual_col.get()) - 1,
-                                 DIRECTION_LABELS[self.manual_direction.get()])
+        row, col = int(self.manual_row.get()) - 1, int(self.manual_col.get()) - 1
+        direction = DIRECTION_LABELS[self.manual_direction.get()]
+        if self.allow_adjacent_var.get():
+            self.puzzle = place_word_with_dictionary(
+                self.puzzle, self.pending_entry, row, col, direction, self._dictionary_lookup())
+        else:
+            self.puzzle = place_word(self.puzzle, self.pending_entry, row, col, direction)
         self.status_var.set(f"{self.pending_entry.answer} er indsat i krydsordet.")
         self.pending_entry = None
         self.selected_word_var.set("Intet ord valgt")
