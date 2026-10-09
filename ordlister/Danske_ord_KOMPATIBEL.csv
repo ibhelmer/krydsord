@@ -1,0 +1,593 @@
+﻿word;clue;category
+AND;Vandfugl med fladt næb;Dyr
+BI;Insekt der fremstiller honning;Dyr
+BILLE;Insekt med hårde forvinger;Dyr
+BJØRN;Stort kraftigt rovdyr;Dyr
+BLÆKSPRUTTE;Havdyr med mange arme;Dyr
+DELFIN;Intelligent havpattedyr;Dyr
+DUE;Fugl der ofte ses på torve;Dyr
+EDDERKOP;Ottebenet spindler;Dyr
+EGERN;Trælevende gnaver med busket hale;Dyr
+ELG;Meget stor hjort med brede gevirer;Dyr
+FALK;Hurtig rovfugl;Dyr
+FIRBEN;Lille krybdyr med hale;Dyr
+FLAGERMUS;Flyvende pattedyr;Dyr
+FLUE;Almindeligt flyvende insekt;Dyr
+FRØ;Padde der kan hoppe;Dyr
+FÅR;Uldgivende husdyr;Dyr
+GED;Husdyr med horn og ofte skæg;Dyr
+GEDDE;Lang rovfisk med mange tænder;Dyr
+GRIS;Husdyr med tryne;Dyr
+GÅS;Stor vandfugl med lang hals;Dyr
+HAJ;Rovfisk med bruskskelet;Dyr
+HANE;Han af tamhøns;Dyr
+HARE;Hurtigt pattedyr med lange ører;Dyr
+HEJRE;Langbenet fugl der fisker;Dyr
+HEST;Stort hovdyr der kan rides;Dyr
+HJORT;Hovdyr hvor hannen ofte har gevir;Dyr
+HUMMER;Stort krebsdyr med klosakse;Dyr
+HUND;Husdyr der ofte gør;Dyr
+HVAL;Meget stort havpattedyr;Dyr
+HVEPS;Gulsort insekt med brod;Dyr
+HØNE;Hun af tamhøns;Dyr
+KALV;Ung ko eller tyr;Dyr
+KANIN;Gravende dyr med lange ører;Dyr
+KAT;Husdyr der ofte spinder;Dyr
+KO;Husdyr der giver mælk;Dyr
+KRABBE;Krebsdyr der går sidelæns;Dyr
+KRAGE;Stor sortgrå fugl;Dyr
+KYLLING;Unge af en høne;Dyr
+LAKS;Fisk der vandrer op i floder;Dyr
+LAM;Unge af et får;Dyr
+LARVE;Ungt stadium af mange insekter;Dyr
+MULDVARP;Gravende dyr med skovlformede forben;Dyr
+MUS;Lille gnaver med lang hale;Dyr
+MYG;Lille insekt der kan stikke;Dyr
+MYRE;Lille socialt insekt;Dyr
+MÅGE;Skrigende fugl ved kysten;Dyr
+PINDSVIN;Lille pattedyr med pigge;Dyr
+RAVN;Meget stor sort kragefugl;Dyr
+REGNORM;Langt jordlevende ringdyr;Dyr
+REJE;Lille krebsdyr med buet krop;Dyr
+ROTTE;Gnaver større end en mus;Dyr
+RÅDYR;Lille hjorteart i Danmark;Dyr
+RÆV;Rovdyr med rødlig pels;Dyr
+SILD;Lille sølvblank stimefisk;Dyr
+SKADE;Sort og hvid fugl med lang hale;Dyr
+SKILDPADDE;Krybdyr med hårdt skjold;Dyr
+SLANGE;Krybdyr uden ben;Dyr
+SNEGL;Bløddyr der ofte bærer hus;Dyr
+SO;Hungris;Dyr
+SOLSORT;Sort fugl med gult næb;Dyr
+SOMMERFUGL;Insekt med store farvede vinger;Dyr
+SPURV;Lille almindelig havefugl;Dyr
+SPÆTTE;Fugl der hakker i træstammer;Dyr
+STORK;Stor langbenet trækfugl;Dyr
+SVALE;Lille fugl med kløftet hale;Dyr
+SVANE;Stor ofte hvid vandfugl;Dyr
+SÆL;Havpattedyr med luffer;Dyr
+TORSK;Spisefisk med skægtråd ved hagen;Dyr
+TUDSE;Kraftig padde med vortet hud;Dyr
+TYR;Han af kvæg;Dyr
+UGLE;Rovfugl der ofte jager om natten;Dyr
+ULV;Vildt hundedyr der lever i flok;Dyr
+VANDMAND;Geleagtigt havdyr med tentakler;Dyr
+ÅL;Lang slangelignende fisk;Dyr
+ØRN;Stor rovfugl med kraftige kløer;Dyr
+ØRRED;Spisefisk i åer og søer;Dyr
+ALFABET;Række af sprogets bogstaver;Fritid
+AVIS;Medie med nyheder og artikler;Fritid
+BADMINTON;Ketsjerspil med fjerbold;Fritid
+BASKETBALL;Boldspil med kurve som mål;Fritid
+BILLEDE;Visuel gengivelse af noget;Fritid
+BLAD;Tidsskrift med artikler og billeder;Fritid
+BLYANT;Skriveredskab med grafit;Fritid
+BOG;Trykt eller digital tekstsamling;Fritid
+BOGSTAV;Tegn i alfabetet;Fritid
+BRÆTSPIL;Spil der foregår på en plade;Fritid
+BÅL;Kontrolleret ild udendørs;Fritid
+CAMPING;Ferie med telt eller campingvogn;Fritid
+CYKLING;Idræt eller transport på cykel;Fritid
+DANS;Bevægelse til musik;Fritid
+DIGT;Tekst ofte skrevet på vers;Fritid
+EVENTYR;Fantastisk fortælling med opdigtede hændelser;Fritid
+FERIE;Fri periode fra arbejde eller skole;Fritid
+FILM;Levende billeder vist på skærm;Fritid
+FISKERI;Aktivitet hvor man fanger fisk;Fritid
+FLØJTE;Blæseinstrument der giver lys lyd;Fritid
+FODBOLD;Boldspil hvor man typisk bruger fødderne;Fritid
+FOTO;Billede taget med kamera;Fritid
+GOLF;Sport hvor en bold slås i hul;Fritid
+GRILL;Redskab til madlavning over varme;Fritid
+GUITAR;Strengeinstrument med gribebræt;Fritid
+GÅDE;Spørgsmål med skjult løsning;Fritid
+GÅTUR;Tur man tager til fods;Fritid
+HISTORIE;Fortælling om hændelser;Fritid
+HÅNDBOLD;Boldspil hvor bolden kastes i mål;Fritid
+HÆKLING;Håndarbejde med garn og hæklenål;Fritid
+KAMERA;Apparat der tager billeder;Fritid
+KAPITEL;Afsnit i en længere bog;Fritid
+KLAVER;Tangentinstrument med strenge;Fritid
+KORTSPIL;Spil der bruger et sæt spillekort;Fritid
+KRYDSORD;Opgave hvor ord flettes sammen;Fritid
+LØB;Idræt hvor man bevæger sig hurtigt til fods;Fritid
+MALERI;Billede lavet med maling;Fritid
+MELODI;Række af toner der danner en helhed;Fritid
+MUSIK;Kunst af organiserede lyde;Fritid
+NOTESBOG;Bog med blanke sider til notater;Fritid
+ORD;Enhed af bogstaver med betydning;Fritid
+PAPIR;Tyndt materiale man skriver på;Fritid
+PEN;Redskab man skriver med;Fritid
+PUSLESPIL;Billede samlet af løse brikker;Fritid
+REJSE;Tur til et andet sted;Fritid
+ROMAN;Længere opdigtet prosafortælling;Fritid
+RYTME;Gentaget mønster af slag eller toner;Fritid
+SANG;Musik fremført med stemmen;Fritid
+SEJLADS;Færdsel på vand med fartøj;Fritid
+SIDE;Et blad eller en flade i en bog;Fritid
+SKAK;Strategisk brætspil med konge og dronning;Fritid
+SKULPTUR;Tredimensionelt kunstværk;Fritid
+SPIL;Aktivitet med regler og deltagere;Fritid
+SPROG;System til menneskelig kommunikation;Fritid
+STRIK;Håndarbejde lavet med strikkepinde;Fritid
+SVØMNING;Idræt hvor man bevæger sig i vand;Fritid
+SÆTNING;Ord sat sammen til et udsagn;Fritid
+TEGNING;Billede lavet med streger;Fritid
+TELT;Sammenklappeligt hus af stof;Fritid
+TENNIS;Ketsjerspil over et net;Fritid
+TERNING;Lille kube med prikker;Fritid
+TONE;Lyd med en bestemt højde;Fritid
+TROMME;Instrument man slår på;Fritid
+VANDRING;Længere tur til fods i naturen;Fritid
+VIOLIN;Lille strygeinstrument med fire strenge;Fritid
+VISKELÆDER;Redskab der fjerner blyantstreger;Fritid
+VOLLEYBALL;Holdspil hvor bolden slås over et net;Fritid
+ALTAN;Udeplads som hænger på en bygning;Hjem
+BAD;Rum med bruser eller badekar;Hjem
+BORD;Møbel med vandret plade;Hjem
+BRUSER;Anordning der spreder vand under bad;Hjem
+BØRSTE;Redskab med hår til rengøring;Hjem
+DYNE;Varmt sengetæppe med fyld;Hjem
+DØR;Åbning med plade der kan lukkes;Hjem
+ENTRE;Indgangsrum i en bolig;Hjem
+FRYSER;Apparat der holder mad frossen;Hjem
+GAFFEL;Spiseredskab med tænder;Hjem
+GANG;Passage mellem flere rum;Hjem
+GARAGE;Bygning eller rum til bilen;Hjem
+GARDIN;Stof der hænger foran et vindue;Hjem
+GLAS;Gennemsigtig drikkebeholder;Hjem
+GRYDE;Dybt kogekar med håndtag;Hjem
+GULV;Flade man går på indendørs;Hjem
+HAVE;Udendørs område med planter ved et hus;Hjem
+HEGN;Afgrænsning omkring en grund;Hjem
+HUS;Bygning man kan bo i;Hjem
+HYLDE;Vandret plade til opbevaring;Hjem
+HÅNDKLÆDE;Stykke stof til at tørre sig med;Hjem
+KNIV;Redskab med skarp æg;Hjem
+KOMFUR;Apparat med kogezoner;Hjem
+KOP;Lille beholder med hank til drikke;Hjem
+KOST;Redskab til at feje med;Hjem
+KÆLDER;Rum under husets stueetage;Hjem
+KØKKEN;Rum hvor man laver mad;Hjem
+KØLESKAB;Hvidevare der holder mad kold;Hjem
+LAMPE;Genstand der giver kunstigt lys;Hjem
+LEJLIGHED;Bolig i en større bygning;Hjem
+LOFT;Øverste indvendige flade i et rum;Hjem
+LÅS;Mekanisme der holder noget lukket;Hjem
+MADRAS;Blødt underlag i en seng;Hjem
+NØGLE;Metalgenstand til en lås;Hjem
+OPVASK;Rengøring af tallerkener og bestik;Hjem
+OVN;Hvidevare der bager og steger;Hjem
+PANDE;Lavt stegekar;Hjem
+PORT;Stor åbning der kan lukkes;Hjem
+PUDE;Blødt underlag til hovedet;Hjem
+RADIATOR;Indretning der varmer et rum;Hjem
+REOL;Møbel med flere hylder;Hjem
+SENG;Møbel man sover i;Hjem
+SKAB;Møbel til opbevaring bag låger;Hjem
+SKE;Spiseredskab med fordybning;Hjem
+SKUFFE;Udtrækkelig opbevaringskasse;Hjem
+SKUR;Lille bygning til opbevaring;Hjem
+SKÅL;Dybt rundt service til mad;Hjem
+SOFA;Polstret møbel med flere siddepladser;Hjem
+SOVEVÆRELSE;Rum hvor man typisk sover;Hjem
+SPAND;Beholder med hank;Hjem
+SPEJL;Glasflade der viser ens billede;Hjem
+STOL;Siddemøbel med ryglæn;Hjem
+STRYGEJERN;Varmt apparat der glatter tøj;Hjem
+STUE;Opholdsrum med sofa og stole;Hjem
+STØVSUGER;Maskine der suger støv op;Hjem
+SÆBE;Middel til vask af hud;Hjem
+TAG;Bygningens øverste beskyttende del;Hjem
+TALLERKEN;Fladt fad man spiser af;Hjem
+TERRASSE;Fladt udendørs opholdsareal;Hjem
+TOILET;Sanitetsgenstand til at besørge;Hjem
+TRAPPE;Trin mellem to niveauer;Hjem
+TÆPPE;Tekstil man kan lægge på gulvet;Hjem
+TØRRETUMBLER;Maskine der tørrer tøj;Hjem
+UR;Genstand der viser tiden;Hjem
+VASK;Beholder med afløb til vand;Hjem
+VASKEMASKINE;Maskine til rengøring af tøj;Hjem
+VINDUE;Glasåbning der giver dagslys;Hjem
+VÆG;Lodret side af et rum;Hjem
+VÆRELSE;Afgrænset rum i en bolig;Hjem
+ADGANG;Mulighed for at komme ind i et system;IT
+ADRESSE;Identifikation af et sted eller en enhed;IT
+ALGORITME;Trinvis metode til at løse et problem;IT
+APP;Program særligt til telefon eller tablet;IT
+BACKUP;Sikkerhedskopi af data;IT
+BATTERI;Energikilde der lagrer elektrisk energi;IT
+BESKED;Kort meddelelse til en anden;IT
+BROWSER;Program der viser hjemmesider;IT
+BRUGER;Person med adgang til et system;IT
+COMPUTER;Elektronisk maskine til databehandling;IT
+DATABASE;Organiseret samling af data;IT
+EMAIL;Elektronisk postbesked;IT
+FIL;Navngivet samling af digitale data;IT
+FIREWALL;System der filtrerer netværkstrafik;IT
+HJEMMESIDE;Side der kan åbnes i en browser;IT
+HUKOMMELSE;Lager til data der bruges af et system;IT
+IKON;Lille billede der repræsenterer en funktion;IT
+INTERNET;Verdensomspændende netværk af netværk;IT
+KABEL;Ledning til strøm eller signaler;IT
+KLIENT;Enhed der bruger en servers tjenester;IT
+KNAP;Element man trykker på for at udføre noget;IT
+KODE;Tegn eller instruktioner med bestemt betydning;IT
+KRYPTERING;Beskyttelse af data ved kodning;IT
+LINK;Klikbar henvisning til en ressource;IT
+LOGIN;Handling hvor man logger på;IT
+MAPPE;Digital beholder til filer;IT
+MENU;Oversigt over valgbare funktioner;IT
+MUS;Pegeenhed til en computer;IT
+NETVÆRK;Forbundne enheder der udveksler data;IT
+NØGLE;Hemmelig eller offentlig værdi i kryptografi;IT
+PAKKE;Afgrænset mængde data sendt over et netværk;IT
+PASSWORD;Hemmelig tegnfølge til adgang;IT
+PIXEL;Mindste billedpunkt på en skærm;IT
+PORT;Logisk eller fysisk tilslutningspunkt;IT
+PRINTER;Enhed der udskriver på papir;IT
+PROCESSOR;Computerens centrale beregningsenhed;IT
+PROGRAM;Samling af instruktioner til en computer;IT
+PROTOKOL;Regler for kommunikation mellem enheder;IT
+ROBOT;Maskine der kan udføre opgaver automatisk;IT
+ROUTER;Enhed der videresender trafik mellem netværk;IT
+SCANNER;Enhed der digitaliserer dokumenter;IT
+SENSOR;Enhed der måler en fysisk størrelse;IT
+SERVER;Computer der leverer tjenester til andre;IT
+SIGNAL;Information overført fysisk eller digitalt;IT
+SKÆRM;Enhed der viser billeder og tekst;IT
+STIK;Forbindelsesdel til en kontakt;IT
+SWITCH;Enhed der forbinder lokale netværksenheder;IT
+TABEL;Data ordnet i rækker og kolonner;IT
+TASTATUR;Enhed med taster til indtastning;IT
+VIRUS;Skadelig kode der kan sprede sig;IT
+AGURK;Lang grøn grøntsag med saftigt indre;Mad
+ANANAS;Tropisk frugt med ru skal og bladroset;Mad
+APPELSIN;Rund citrusfrugt med orange skal;Mad
+AVOCADO;Grøn fedtholdig frugt med stor sten;Mad
+BANAN;Gul bøjet frugt;Mad
+BLOMKÅL;Lys kål med tæt blomsterhoved;Mad
+BLOMME;Rund stenfrugt med glat skræl;Mad
+BLÅBÆR;Lille mørkeblåt bær;Mad
+BOLLE;Lille rundt brød;Mad
+BROCCOLI;Grøn kål med små blomsterknopper;Mad
+BROMBÆR;Mørkt bær fra en tornet busk;Mad
+BRØD;Bagværk af mel og vand;Mad
+BURGER;Bolle med bøf og tilbehør;Mad
+BØNNE;Spiselig frø eller bælg;Mad
+CHOKOLADE;Sød masse fremstillet af kakao;Mad
+CITRON;Gul meget syrlig citrusfrugt;Mad
+DRUE;Lille frugt der vokser i klaser;Mad
+EDDIKE;Syrlig væske til dressing;Mad
+FERSKEN;Blød stenfrugt med dunet skind;Mad
+FISK;Dyr fra vandet der spises som mad;Mad
+FLØDE;Mælkens fede del;Mad
+FRIKADELLE;Stegt rund farsret;Mad
+GRYDERET;Ret tilberedt i én gryde;Mad
+GRÆSKAR;Stor rund frugt med orange kød;Mad
+GULEROD;Orange rodfrugt;Mad
+GÆR;Mikroorganisme der hæver dej;Mad
+HINDBÆR;Blødt rødt bær med hul kerne;Mad
+HONNING;Sød masse fremstillet af bier;Mad
+HVIDLØG;Stærkt duftende løgplante;Mad
+ISVAFFEL;Spiselig vaffel med is;Mad
+JORDBÆR;Rødt bær med små kerner udenpå;Mad
+JUICE;Drik presset af frugt;Mad
+KAFFE;Varm drik af ristede bønner;Mad
+KAGE;Sødt bagværk;Mad
+KAKAO;Pulver fra kakaobønner;Mad
+KARTOFFEL;Knold der ofte koges til aftensmad;Mad
+KIKS;Tørt sprødt bagværk;Mad
+KIRSEBÆR;Lille rød stenfrugt;Mad
+KYLLING;Fjerkræ der ofte serveres stegt;Mad
+KÅL;Grøntsag med tætsiddende blade;Mad
+KØDBOLLE;Lille rund kugle af fars;Mad
+LIME;Lille grøn citrusfrugt;Mad
+LØG;Grøntsag der kan få øjnene til at løbe;Mad
+MAJS;Gule kerner på en kolbe;Mad
+MANDARIN;Lille citrusfrugt der er nem at skrælle;Mad
+MANDEL;Aflang spiselig kerne;Mad
+MANGO;Sød tropisk stenfrugt;Mad
+MEL;Fintmalet korn;Mad
+MELON;Stor saftig frugt;Mad
+MÆLK;Hvid drik fra blandt andet køer;Mad
+NØD;Hårdskallet spiselig kerne;Mad
+OLIE;Flydende fedtstof til madlavning;Mad
+OST;Mejeriprodukt af størknet mælk;Mad
+PASTA;Dejvarer som spaghetti og penne;Mad
+PEBER;Stærkt krydderi fra peberplanten;Mad
+PIZZA;Fladt bagt brød med fyld;Mad
+PORRE;Lang grøntsag med hvide og grønne blade;Mad
+PÆRE;Frugt med bred bund og smal top;Mad
+PØLSE;Kødmasse i et hylster;Mad
+RIS;Små hvide korn til kogning;Mad
+RUGBRØD;Mørkt brød af rugmel;Mad
+SAFT;Sød drik af frugt eller bær;Mad
+SALAT;Grønne blade til kolde retter;Mad
+SALT;Hvidt krydderi med salt smag;Mad
+SKINKE;Kødstykke fra grisens bagparti;Mad
+SKYR;Tykt syrnet mejeriprodukt;Mad
+SMØR;Fedtstof lavet af fløde;Mad
+SPINAT;Grøn bladgrøntsag;Mad
+SUKKER;Sødt stof brugt i bagning;Mad
+SUPPE;Flydende madret i en skål;Mad
+SYLTETØJ;Frugt kogt med sukker;Mad
+TE;Drik af blade trukket i varmt vand;Mad
+TOMAT;Rød frugt der bruges som grøntsag;Mad
+VALNØD;Nød med foldet kerne;Mad
+YOGHURT;Syrnet mælkeprodukt;Mad
+ÆBLE;Rund frugt der ofte er rød eller grøn;Mad
+ÆG;Oval fødevare lagt af høns;Mad
+ÆRT;Lille grøn kugle i en bælg;Mad
+ALBUE;Led midt på armen;Menneske
+ANKEL;Led mellem fod og underben;Menneske
+ANSIGT;Forsiden af hovedet;Menneske
+ARM;Lem fra skulder til hånd;Menneske
+BABY;Meget lille barn;Menneske
+BAGER;Person der fremstiller brød;Menneske
+BARN;Ungt menneske;Menneske
+BEDSTEFAR;Ens mors eller fars far;Menneske
+BEDSTEMOR;Ens mors eller fars mor;Menneske
+BEN;Lem man står og går på;Menneske
+BLOD;Rød væske der løber i årerne;Menneske
+BRANDMAND;Person der slukker brande;Menneske
+BROR;Mandligt søskende;Menneske
+BRYST;Forsiden af overkroppen;Menneske
+DATTER;Kvindeligt barn af sine forældre;Menneske
+DRØM;Oplevelse under søvn;Menneske
+ELEV;Person der modtager undervisning;Menneske
+FAMILIE;Mennesker der er beslægtede;Menneske
+FAR;Mandlig forælder;Menneske
+FINGER;Bevægelig del af hånden;Menneske
+FOD;Kropsdel man står på;Menneske
+FRYGT;Følelse af at være bange;Menneske
+GLÆDE;Følelse af lykke;Menneske
+GRIN;Lyd og udtryk ved morskab;Menneske
+HAGE;Nederste fremspring i ansigtet;Menneske
+HALS;Forbindelsen mellem hoved og krop;Menneske
+HJERNE;Organ der styrer nervesystemet;Menneske
+HJERTE;Muskel der pumper blod rundt;Menneske
+HOFTE;Led hvor benet møder bækkenet;Menneske
+HOVED;Øverste del af kroppen;Menneske
+HUD;Kroppens yderste beskyttende lag;Menneske
+HÅND;Kropsdel med fingre;Menneske
+HÅR;Tråde der vokser på hovedet;Menneske
+KNOGLE;Hård del af skelettet;Menneske
+KNÆ;Led midt på benet;Menneske
+KOK;Person der laver mad professionelt;Menneske
+LUNGE;Organ der optager ilt fra luften;Menneske
+LÆBE;Blød kant omkring munden;Menneske
+LÆGE;Person der undersøger og behandler syge;Menneske
+LÆRER;Person der underviser;Menneske
+MALER;Håndværker der påfører maling;Menneske
+MAVE;Kropsdel mellem bryst og bækken;Menneske
+MOR;Kvindelig forælder;Menneske
+MUND;Åbning til at spise og tale;Menneske
+MURER;Håndværker der bygger med sten;Menneske
+MUSKEL;Væv der kan trække sig sammen;Menneske
+NABO;Person der bor tæt ved;Menneske
+NEGL;Hård plade på en fingerspids;Menneske
+NÆSE;Organ der bruges til at lugte;Menneske
+PANDE;Område over øjenbrynene;Menneske
+POLITI;Myndighed der håndhæver loven;Menneske
+RO;Tilstand uden uro;Menneske
+RYG;Bagsiden af overkroppen;Menneske
+SKULDER;Led mellem arm og overkrop;Menneske
+SMIL;Venligt udtryk omkring munden;Menneske
+SORG;Smertefuld følelse efter tab;Menneske
+STEMME;Lyd en person frembringer ved tale;Menneske
+SULT;Behov for mad;Menneske
+SYGEPLEJER;Person der plejer patienter;Menneske
+SØN;Mandligt barn af sine forældre;Menneske
+SØSTER;Kvindeligt søskende;Menneske
+SØVN;Tilstand hvor kroppen hviler;Menneske
+TAND;Hård del der bruges til at tygge;Menneske
+TOMMEL;Håndens korte modsatte finger;Menneske
+TUNGE;Muskel i munden der smager;Menneske
+TÅ;En af fodens yderste dele;Menneske
+TÅRE;Væskedråbe fra øjet;Menneske
+TØMRER;Håndværker der arbejder med træ;Menneske
+TØRST;Behov for at drikke;Menneske
+VEN;Person man holder af og kender godt;Menneske
+VOKSEN;Person der ikke længere er barn;Menneske
+VREDE;Følelse af stærk irritation;Menneske
+ØJE;Sanseorgan der registrerer lys;Menneske
+ØRE;Sanseorgan der registrerer lyd;Menneske
+AFTEN;Dagens sidste timer;Natur
+AGERN;Frugt fra et egetræ;Natur
+BAKKE;Mindre forhøjning i terrænet;Natur
+BIRK;Træ med lys bark;Natur
+BJERG;Stor naturlig forhøjning i landskabet;Natur
+BLAD;Grøn plantedel der laver fotosyntese;Natur
+BLOMST;Plantedel der ofte har kronblade;Natur
+BREGNE;Plante med fjerformede blade;Natur
+BØG;Træ med glat grå bark;Natur
+DAG;Tiden mellem solopgang og solnedgang;Natur
+DAL;Lavt område mellem højder;Natur
+DUG;Små vanddråber på kølige flader;Natur
+EFTERÅR;Årstiden før vinter;Natur
+EGETRÆ;Træ der bærer agern;Natur
+ENG;Åbent græsbevokset område;Natur
+FLOD;Stort naturligt vandløb;Natur
+FORÅR;Årstiden efter vinter;Natur
+FROST;Temperatur under frysepunktet;Natur
+FRØ;Anlæg til en ny plante;Natur
+FYR;Nåletræ med lange nåle;Natur
+GRAN;Nåletræ med kogler;Natur
+GREN;Del der vokser ud fra en træstamme;Natur
+GRÆS;Smalle grønne blade på en eng;Natur
+HAGL;Små isklumper fra skyerne;Natur
+HAV;Stort sammenhængende saltvandsområde;Natur
+IS;Frossent vand;Natur
+KAKTUS;Tørketålende plante med pigge;Natur
+KLIT;Bakke dannet af flyvesand;Natur
+KLØVER;Plante ofte med tre småblade;Natur
+KOGLE;Frøstand fra et nåletræ;Natur
+KYST;Grænsen mellem land og hav;Natur
+LER;Finkornet jord der kan formes;Natur
+LILJE;Blomst med store kronblade;Natur
+LYN;Elektrisk udladning på himlen;Natur
+MARK;Dyrket jordstykke;Natur
+MORGEN;Dagens første timer;Natur
+MOS;Lille grøn plante uden blomster;Natur
+MULD;Næringsrig mørk jord;Natur
+MÅNE;Jordens naturlige satellit;Natur
+NAT;Tiden mellem solnedgang og solopgang;Natur
+PIL;Træ med smalle blade;Natur
+REGN;Nedbør i form af vanddråber;Natur
+REGNBUE;Farvet bue efter regn og sol;Natur
+RIM;Hvid belægning af iskrystaller;Natur
+ROD;Del af planten der optager vand;Natur
+ROSE;Blomst med ofte tornet stængel;Natur
+SAND;Små korn af nedbrudt sten;Natur
+SKOV;Stort område med mange træer;Natur
+SKY;Synlig samling af vanddråber i luften;Natur
+SKYGGE;Mørkt område bag noget der spærrer lyset;Natur
+SNE;Hvid nedbør af iskrystaller;Natur
+SOL;Stjernen i vores solsystem;Natur
+SOLSIKKE;Høj blomst der vender mod lyset;Natur
+SOMMER;Årets varmeste årstid;Natur
+STAMME;Træets kraftige hoveddel;Natur
+STEN;Hårdt naturligt stykke mineral;Natur
+STJERNE;Lysende himmellegeme på nattehimlen;Natur
+STORM;Meget kraftig vind;Natur
+STRAND;Kyst med sand eller sten;Natur
+SVAMP;Organisme der ofte har hat og stok;Natur
+SØ;Vand omgivet af land;Natur
+TORDEN;Brag efter et lyn;Natur
+TULIPAN;Forårsblomst med bægerformet hoved;Natur
+TÅGE;Sky helt nede ved jordoverfladen;Natur
+VALMUE;Blomst med tynde røde kronblade;Natur
+VIND;Luft der bevæger sig;Natur
+VINTER;Årets koldeste årstid;Natur
+APOTEK;Butik hvor medicin udleveres;Tid og samfund
+APRIL;Årets fjerde måned;Tid og samfund
+AUGUST;Måneden efter juli;Tid og samfund
+BANK;Institution der opbevarer og låner penge;Tid og samfund
+BIBLIOTEK;Sted hvor man kan låne bøger;Tid og samfund
+BIOGRAF;Sted hvor man ser film;Tid og samfund
+BORGER;Person der er medlem af et samfund;Tid og samfund
+BUTIK;Sted hvor varer sælges;Tid og samfund
+BY;Større samling af huse og gader;Tid og samfund
+DATO;Angivelse af dag måned og år;Tid og samfund
+DECEMBER;Årets sidste måned;Tid og samfund
+DEMOKRATI;Styreform hvor folket har indflydelse;Tid og samfund
+DOMSTOL;Myndighed der afgør retssager;Tid og samfund
+DØGN;Tidsrum på fireogtyve timer;Tid og samfund
+FEBRUAR;Årets anden måned;Tid og samfund
+FOLK;Mennesker som gruppe;Tid og samfund
+FREDAG;Ugedag før lørdag;Tid og samfund
+JANUAR;Årets første måned;Tid og samfund
+JULI;Årets syvende måned;Tid og samfund
+JUNI;Årets sjette måned;Tid og samfund
+KALENDER;Oversigt over dage og måneder;Tid og samfund
+KIRKE;Bygning til kristen gudstjeneste;Tid og samfund
+KOMMUNE;Lokal offentlig forvaltningsenhed;Tid og samfund
+KVITTERING;Bevis for et køb;Tid og samfund
+LAND;Geografisk område eller stat;Tid og samfund
+LANDSBY;Lille bebyggelse på landet;Tid og samfund
+LOV;Regel vedtaget af lovgivende myndighed;Tid og samfund
+LØRDAG;Ugedag efter fredag;Tid og samfund
+MAJ;Måneden mellem april og juni;Tid og samfund
+MANDAG;Ugens første hverdag;Tid og samfund
+MARKED;Sted hvor flere sælger varer;Tid og samfund
+MARTS;Årets tredje måned;Tid og samfund
+MINISTER;Medlem af en regering;Tid og samfund
+MINUT;Tidsenhed på tres sekunder;Tid og samfund
+MUSEUM;Sted med udstillinger af genstande;Tid og samfund
+MÅNED;En af årets tolv dele;Tid og samfund
+MØNT;Rundt betalingsmiddel af metal;Tid og samfund
+NOVEMBER;Måneden før december;Tid og samfund
+OKTOBER;Årets tiende måned;Tid og samfund
+ONSDAG;Ugedag før torsdag;Tid og samfund
+PARK;Offentligt grønt område;Tid og samfund
+PENGE;Almindeligt betalingsmiddel;Tid og samfund
+PLADS;Åbent område i en by;Tid og samfund
+PRIS;Beløb man skal betale;Tid og samfund
+REGERING;Landets øverste udøvende ledelse;Tid og samfund
+REGION;Større geografisk eller administrativt område;Tid og samfund
+RÅDHUS;Bygning for kommunens administration;Tid og samfund
+SEDDEL;Papirpenge med pålydende værdi;Tid og samfund
+SEKUND;Kort tidsenhed;Tid og samfund
+SEPTEMBER;Årets niende måned;Tid og samfund
+SKAT;Penge der betales til det offentlige;Tid og samfund
+SKOLE;Sted hvor børn og unge undervises;Tid og samfund
+STAT;Politisk organiseret land;Tid og samfund
+STEMME;Tilkendegivelse ved et valg;Tid og samfund
+SYGEHUS;Sted hvor patienter behandles;Tid og samfund
+SØNDAG;Ugens sidste dag;Tid og samfund
+TEATER;Sted hvor skuespil opføres;Tid og samfund
+TIME;Tidsenhed på tres minutter;Tid og samfund
+TIRSDAG;Ugedag efter mandag;Tid og samfund
+TORSDAG;Ugedag efter onsdag;Tid og samfund
+TORV;Åben plads i en by;Tid og samfund
+UGE;Tidsrum på syv dage;Tid og samfund
+VALG;Afstemning om repræsentanter;Tid og samfund
+ÅR;Tidsrum på tolv måneder;Tid og samfund
+ÅRHUNDREDE;Tidsrum på hundrede år;Tid og samfund
+ÅRTI;Tidsrum på ti år;Tid og samfund
+BIL;Motorkøretøj med normalt fire hjul;Transport
+BILLET;Bevis på ret til en rejse;Transport
+BREMSE;Mekanisme der sænker farten;Transport
+BRO;Konstruktion der fører over en hindring;Transport
+BUS;Stort køretøj til mange passagerer;Transport
+BÅD;Mindre fartøj på vandet;Transport
+CYKEL;Tohjulet køretøj med pedaler;Transport
+CYKELSTI;Færdselsareal beregnet til cykler;Transport
+DÆK;Gummibelægning rundt om et hjul;Transport
+FLY;Luftfartøj med vinger;Transport
+FORTOV;Gangareal langs en vej;Transport
+FÆRGE;Skib der transporterer passagerer og biler;Transport
+GADE;Vej mellem bygninger i en by;Transport
+HAVN;Sted hvor skibe kan lægge til;Transport
+HELIKOPTER;Luftfartøj med roterende rotor;Transport
+HJUL;Rund del der ruller på en aksel;Transport
+KAJAK;Smal båd der drives med pagaj;Transport
+KANO;Åben båd der drives med pagaj;Transport
+KNALLERT;Lille motoriseret tohjuler;Transport
+KOMPAS;Instrument der viser verdenshjørner;Transport
+KORT;Tegnet oversigt over et område;Transport
+KRYDS;Sted hvor veje mødes;Transport
+KUFFERT;Stor taske til rejsebagage;Transport
+LASTBIL;Stort køretøj til gods;Transport
+LUFTHAVN;Sted hvor fly letter og lander;Transport
+MOTOR;Maskine der skaber bevægelse;Transport
+MOTORCYKEL;Motordrevet køretøj med to hjul;Transport
+PAS;Officielt dokument til rejser;Transport
+RAT;Styrehjul i en bil;Transport
+RUNDKØRSEL;Cirkelformet vejkryds;Transport
+RUTE;Planlagt vej fra et sted til et andet;Transport
+RYGSÆK;Taske båret på ryggen;Transport
+SEJLBÅD;Båd der drives frem af sejl;Transport
+SKIB;Stort fartøj til sejlads;Transport
+SKILT;Tavle med information eller påbud;Transport
+STATION;Sted hvor tog holder;Transport
+STI;Smal rute til fods eller på cykel;Transport
+STOPPESTED;Sted hvor bussen standser;Transport
+SÆDE;Plads man sidder på i et køretøj;Transport
+TAXA;Bil man betaler for at blive kørt i;Transport
+TOG;Køretøj der kører på skinner;Transport
+TRAFIKLYS;Lys der regulerer trafikken;Transport
+TRAKTOR;Arbejds- og trækkøretøj i landbruget;Transport
+TUNNEL;Passage under jord eller vand;Transport
+VEJ;Anlagt færdselsåre;Transport
